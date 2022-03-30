@@ -1,0 +1,26 @@
+.app {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-image: url('../src/assets/bg3.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding: 2em 0;
+}
+
+.navbar-nav {
+  li a {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #ffffff;
+  }
+}
