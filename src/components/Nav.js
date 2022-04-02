@@ -20,13 +20,13 @@ function nav() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active mx-lg-2" aria-current="page" href="#">ABOUT US</a>
+              <a className="nav-link active mx-lg-2" aria-current="page" href="/about">ABOUT US</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active mx-lg-2" aria-current="page" href="#">SIGN-IN</a>
+              <a className="nav-link active mx-lg-2" aria-current="page" href="/sign-in">SIGN-IN</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active mx-lg-2" aria-current="page" href="#">SIGN-UP</a>
+              <a className="nav-link active mx-lg-2" aria-current="page" href="/sign-up">SIGN-UP</a>
             </li>
           </ul>
           <div className="btn-download-purple d-flex justify-content-center align-items-center mx-2">
