@@ -59,9 +59,31 @@ function Footer() {
 
               <div className="table">
                 <div className="d-flex justify-content-between">
-                  <div className="email"></div>
-                  <div className="email-text"></div>
+                  <div className="email">Email</div>
+                  <div className="email-text">Hello@1minutepay.com</div>
                 </div>
+
+                <div className="d-flex justify-content-between">
+                  <div className="email">Twitter</div>
+                  <div className="email-text">@1minutepay</div>
+                </div>
+
+                <div className="d-flex justify-content-between">
+                  <div className="email">Medium</div>
+                  <div className="email-text">@1minutepay</div>
+                </div>
+
+                <div className="d-flex justify-content-between">
+                  <div className="email">Whatsapp</div>
+                  <div className="email-text">@1minutepay</div>
+                </div>
+
+                <div className="d-flex justify-content-between">
+                  <div className="email">Facebook</div>
+                  <div className="email-text">@1minutepay</div>
+                </div>
+
+                
               </div>
             </div>
             <div className="col-12 col-md-6"></div>
