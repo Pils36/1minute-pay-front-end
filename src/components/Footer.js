@@ -56,6 +56,13 @@ function Footer() {
               <div className="community-text">
               Learn more about 1MinutePay, chat with the team, others in the community, and have your say in shaping the future of the Digital transactional space.
               </div>
+
+              <div className="table">
+                <div className="d-flex justify-content-between">
+                  <div className="email"></div>
+                  <div className="email-text"></div>
+                </div>
+              </div>
             </div>
             <div className="col-12 col-md-6"></div>
           </div>
