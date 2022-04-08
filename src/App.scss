@@ -9,8 +9,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
-  padding: 2em 0;
+  // height: 100vh;
+  padding: 2em 0 1em;
 }
 
 .navbar {
@@ -69,13 +69,73 @@
     letter-spacing: 0em;
     text-align: left;      
   }
+}
 
-  .scroll-text {
-    font-family: Roboto;
-    font-size: 10px;
+.header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8em 1em 0em 10em ;
+}
+
+.scroll-text {
+  font-family: Roboto;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+  color: #ffffff;   
+}
+
+.cryptobox {
+  .box-purple {
+    padding: 15px 2em;
+    width: 234px;
+    height: 141px;
+    background: rgba(49, 14, 58, 0.8);
+    border-radius: 18px 0px 0px 18px;
+  }
+  
+  .box-grey {
+    padding: 15px 2em;
+    width: 234px;
+    height: 141px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0px 18px 18px 0px;
+  }
+
+  .box-text {
+    margin: 10px 0;
+  }
+  
+  .head-text {
+    font-family: Fredoka;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 12px;
+    line-height: 20px;
     letter-spacing: 0em;
-    text-align: left;    
+    color: #ffffff;
+  }
+
+  .body-text-purple {
+    font-family: Work Sans;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    color: #AE91E0;
+
+  }
+
+  .body-text-grey {
+    font-family: Work Sans;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    color: #9B9B9B;
   }
 }
+
+
+
