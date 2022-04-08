@@ -139,7 +139,7 @@
 
 .download {
   background: #E9EDFF;
-  padding: 10em 15em;
+  padding: 10em 15em 0em;
 
   .download-header {
     font-family: Fredoka;
@@ -182,6 +182,20 @@
 
   .line {
     width: 100%;
+  }
+
+  .btn-download-black {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0em;
+    color: #ffffff;
+    height: 56px;
+    width: 254px;
+    border-radius: 28px;
+    background: #000000;
+    margin: 2em 0;
   }
 }
 
