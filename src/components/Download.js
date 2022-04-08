@@ -3,6 +3,8 @@ import webView from '../assets/webview.svg';
 import mobileApp from '../assets/mobileapp.svg';
 import robot from '../assets/robot.svg';
 import Line from '../assets/download-line.svg';
+import Andriod from '../assets/andriod.svg';
+import Apple from '../assets/apple.svg';
 
 function Download() {
   return (
@@ -43,6 +45,18 @@ function Download() {
               <div className="download-text">
               Ofcourse we also created an amazing mobile application for you to use on the go, we mean it, the same speed anytime, anywhere.
               </div>
+              <div className="btn-download-purple d-flex justify-content-center align-items-center mx-2">
+                <div className='d-flex justify-content-center align-items-center mx-2'>
+                  <div className='ps-2'>DOWNLOAD THE APP </div>
+                  <img src={Line} alt="" className='px-2' />
+                  <a href="/andriod">
+                    <img src={Andriod} alt="" className='mx-2'/>
+                  </a>
+                  <a href="/apple">
+                    <img src={Apple} alt="" className='mx-2' />
+                  </a>
+                </div>
+                </div>
             </div>
             <div className="col-12 col-md-6">
               <div className="robot">
