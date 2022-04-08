@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import FooterLogo from '../assets/footer-logo.svg';
 
 function Footer() {
   return (
@@ -47,7 +48,7 @@ function Footer() {
 
       <div className="community">
         <div className="container">
-          <div className="row">
+          <div className="row mx-auto d-flex justify-content-between">
             <div className="col-12 col-md-6">
               <div className="community-head">
               Join Our Community
@@ -58,27 +59,27 @@ function Footer() {
               </div>
 
               <div className="table">
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Email</div>
                   <div className="email-text">Hello@1minutepay.com</div>
                 </div>
 
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Twitter</div>
                   <div className="email-text">@1minutepay</div>
                 </div>
 
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Medium</div>
                   <div className="email-text">@1minutepay</div>
                 </div>
 
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Whatsapp</div>
                   <div className="email-text">@1minutepay</div>
                 </div>
 
-                <div className="d-flex justify-content-between">
+                <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Facebook</div>
                   <div className="email-text">@1minutepay</div>
                 </div>
@@ -86,7 +87,32 @@ function Footer() {
                 
               </div>
             </div>
-            <div className="col-12 col-md-6"></div>
+            <div className="col-12 col-md-4">
+              <div className="footer-logo d-flex justify-content-end">
+                <img src={FooterLogo} alt="" />
+              </div>
+
+              <div className="address">
+              23, Afolabi Close,<br/> Opebi Road, Ikeja, Lagos <br/> © 1MinutePay - 2022
+              </div>
+
+              <div className="d-flex justify-content-between align-items-center footer-border faq-border">
+                <div className="email-text">FAQs</div>
+              </div>
+
+                <div className="d-flex justify-content-between align-items-center footer-border">
+                  <div className="email-text">Terms and Conditions</div>
+                </div>
+
+                <div className="copyright">
+                © Copyright 1MinutePay ltd. <br/>
+                Authorised by CAC Nigeria - RC947663
+                </div>
+
+                <div className="signature">
+                Made by O2-Digital
+                </div>
+            </div>
           </div>
         </div>
       </div>

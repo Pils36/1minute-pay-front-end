@@ -206,7 +206,7 @@
 
 .footer {
   background: #E4AD52;
-  padding: 10em 15em 0em;
+  padding: 10em 15em 5em;
   position: relative;
   z-index: 2;
 
@@ -252,7 +252,7 @@
   }
 
   .community {
-    padding-top: 5em;
+    padding: 5em 5em;
 
     .community-head {
       font-family: Fredoka;
@@ -283,7 +283,8 @@
     line-height: 16px;
     letter-spacing: 0em;
     text-align: left;
-    color: #ffffff;    
+    color: #ffffff;
+    padding: 2em 0;    
   }
 
   .email-text {
@@ -293,7 +294,43 @@
     line-height: 16px;
     letter-spacing: 0em;
     text-align: right;
-    color: #ffffff;    
+    color: #ffffff;
+    padding: 2em 0;    
+  }
+
+  .footer-border {
+    border-bottom: 1px solid #F8BC5B;
+  }
+
+  .faq-border {
+    border-top: 1px solid #F8BC5B;
+
+  }
+
+  .footer-logo {
+    padding: 10em 0 1em;
+  }
+
+  .address {
+    font-family: Work Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: right;
+    margin: 1.5em 0;
+    color: #000000;
+  }
+
+  .copyright, .signature {
+    font-family: Work Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: right;    
+    margin: 1.5em 0;
+    color: #000000;
   }
 }
 
