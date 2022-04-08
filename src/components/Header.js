@@ -21,40 +21,39 @@ function Header() {
           </div>
         </div>
       </main>
-
-        <div className="header-bottom">
-          <div className="scroll">
-            <div className='d-flex justify-content-start align-items-center'>
-              <div className="arrow d-flex justify-content-start align-items-center">
-                <img src={Arrow}  alt="" />
-                <div className='scroll-text mx-3'>Scroll to move along</div>
-              </div>
+      <div className="header-bottom">
+        <div className="scroll">
+          <div className='d-flex justify-content-start align-items-center'>
+            <div className="arrow d-flex justify-content-start align-items-center">
+              <img src={Arrow}  alt="" />
+              <div className='scroll-text mx-3'>Scroll to move along</div>
             </div>
           </div>
+        </div>
 
-          <div className="crypto-card">
-            <div className="cryptobox d-flex justify-content-end">
-              <div className="box-purple">
-                <div className="box-img d-flex justify-content-end">
-                  <img src={BoxEth}  alt="" />
-                </div>
-                <div className="box-text">
-                  <div className="head-text">Trade Crypto</div>
-                  <div className="body-text-purple">Sell your coins for quick cash</div>
-                </div>
+        <div className="crypto-card">
+          <div className="cryptobox d-flex justify-content-end">
+            <div className="box-purple">
+              <div className="box-img d-flex justify-content-end">
+                <img src={BoxEth}  alt="" />
               </div>
-              <div className="box-grey">
-                <div className="box-img d-flex justify-content-end">
-                  <img src={BoxAmazon}  alt="" />
-                </div>
-                <div className="box-text">
-                  <div className="head-text">Trade Gift Cards</div>
-                  <div className="body-text-grey">View our array of Options</div>
-                </div>
+              <div className="box-text">
+                <div className="head-text">Trade Crypto</div>
+                <div className="body-text-purple">Sell your coins for quick cash</div>
+              </div>
+            </div>
+            <div className="box-grey">
+              <div className="box-img d-flex justify-content-end">
+                <img src={BoxAmazon}  alt="" />
+              </div>
+              <div className="box-text">
+                <div className="head-text">Trade Gift Cards</div>
+                <div className="body-text-grey">View our array of Options</div>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </div>
   )
 }
