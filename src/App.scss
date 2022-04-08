@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .app {
   margin: 0;
   padding: 0;
@@ -9,7 +15,6 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  // height: 100vh;
   padding: 2em 0 1em;
 }
 
@@ -202,8 +207,14 @@
 .footer {
   background: #E4AD52;
   padding: 10em 15em 0em;
+  position: relative;
+  z-index: 2;
+
 
   .countdown {
+    z-index: 2;
+    position: absolute;
+    top: -4em ;
     border-radius: 40px;  
     background: #F3F5FF;
     padding: 5em;  
@@ -227,6 +238,42 @@
     letter-spacing: 0em;
     text-align: left;
     color: #BB9CC3;    
+  }
+
+  .countdown-text {
+    font-family: Work Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #52345A;    
+    margin: 1em 0;
+  }
+
+  .community {
+    padding-top: 5em;
+
+    .community-head {
+      font-family: Fredoka;
+      font-size: 70px;
+      font-weight: 400;
+      line-height: 60px;
+      letter-spacing: 0em;
+      text-align: left;
+      color: #310E3A;      
+    }
+
+    .community-text {
+      font-family: Work Sans;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin: 4em 0 2em;
+      color: #52345A;      
+    }
   }
 }
 
