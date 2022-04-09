@@ -25,7 +25,7 @@ function Footer() {
             <div className="col-12 col-md-3 d-flex justify-content-center">
               <div className="d-flex flex-column justify-content-center align-items-center">
                 <div className="countdown-number">
-                97,084
+                1,632,394
                 </div>
                 <div className="countdown-text">
                 Successful Transactions

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Logo from '../assets/logo.svg';
 import MenuOpen from '../assets/menu-open.svg';
 import MenuClose from '../assets/menu-close.svg';
@@ -6,15 +6,18 @@ import Line from '../assets/line.svg';
 import Andriod from '../assets/andriod.svg';
 import Apple from '../assets/apple.svg';
 
-function nav() {
+function Nav() {
+  const [isOpen, setIsOpen] = useState(false);
+  console.log(isOpen);
+
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container">
         <a className="navbar-brand" href="/">
           <img src={Logo} alt="logo" />
         </a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <img src={MenuOpen} alt="" />
+        <button onClick={ () => {setIsOpen(prev => !prev)} } className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <img src={isOpen? MenuClose : MenuOpen} alt="" />
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -46,4 +49,4 @@ function nav() {
   )
 }
 
-export default nav
+export default Nav

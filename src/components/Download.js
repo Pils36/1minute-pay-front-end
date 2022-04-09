@@ -6,12 +6,13 @@ import Line from '../assets/download-line.svg';
 import WhiteLine from '../assets/white-line.svg';
 import Andriod from '../assets/andriod.svg';
 import Apple from '../assets/apple.svg';
+import Video from '../assets/bg-video.mp4';
 
 function Download() {
   return (
     <section className="download">
       <div className="container">
-        <div className="web">
+        {/* <div className="web">
           <div className="row">
             <div className="col-12 col-md-6 web-box">
               <div className="download-icon">
@@ -30,11 +31,11 @@ function Download() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <img src={Line} alt="" className='line' />
+        {/* <img src={Line} alt="" className='line' /> */}
 
-        <div className="mobile">
+        {/* <div className="mobile">
           <div className="row">
             <div className="col-12 col-md-6 mobile-box">
               <div className="download-icon">
@@ -65,7 +66,7 @@ function Download() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )
