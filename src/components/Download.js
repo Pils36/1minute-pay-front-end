@@ -6,15 +6,14 @@ import Line from '../assets/download-line.svg';
 import WhiteLine from '../assets/white-line.svg';
 import Andriod from '../assets/andriod.svg';
 import Apple from '../assets/apple.svg';
-import Video from '../assets/bg-video.mp4';
 
 function Download() {
   return (
     <section className="download">
       <div className="container">
-        {/* <div className="web">
+        <div className="web">
           <div className="row">
-            <div className="col-12 col-md-6 web-box">
+            <div className="col-12 col-sm-12 col-md-6 web-box order-2 order-sm-2 order-md-1 order-lg-1 ">
               <div className="download-icon">
                 <img src={webView} alt="" />
               </div>
@@ -25,19 +24,19 @@ function Download() {
               We have made our beautiful services available via our web-app for those who want to use the platform via browser.
               </div>
             </div>
-            <div className="col-12 col-md-6">
+            <div className="col-12 col-sm-12 col-md-6 order-1 order-sm-1 order-md-2 order-lg-2">
               <div className="welcome-header">
               Welcome to next Generation Transactions.
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        {/* <img src={Line} alt="" className='line' /> */}
+        <img src={Line} alt="" className='line' />
 
-        {/* <div className="mobile">
+        <div className="mobile">
           <div className="row">
-            <div className="col-12 col-md-6 mobile-box">
+            <div className="col-12 col-sm-12 col-md-6 mobile-box">
               <div className="download-icon">
                 <img src={mobileApp} alt="" />
               </div>
@@ -60,13 +59,13 @@ function Download() {
                 </div>
                 </div>
             </div>
-            <div className="col-12 col-md-6">
+            <div className="col-12 col-sm-12 col-md-6">
               <div className="robot">
-                <img src={robot} alt="" />
+                <img src={robot} alt="" className='robot-img' />
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     </section>
   )

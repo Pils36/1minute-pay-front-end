@@ -18,7 +18,6 @@
 
 .header {
   position: relative;
-  // background-color: #4B2A85;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -381,7 +380,47 @@ video {
   .header-bottom {
     padding: 1em 1em 0em 10em !important ;
   }
-  
+
+  .robot-img {
+    width: 326px;
+    height: 340px;
+  }
+
+  .download {
+    padding: 5em 5em 0em;
+  }
+
+  .welcome-header {
+    font-family: Fredoka;
+    font-size: 35px!important;
+    font-weight: 400!important;
+    line-height: 35px!important;
+    letter-spacing: 0em!important;
+    text-align: left!important;
+    padding: 0 !important;
+  }
+
+  .download-header {
+    font-family: Fredoka;
+    font-size: 22px!important;
+    font-weight: 400!important;
+    line-height: 40px!important;
+    letter-spacing: 0em!important;
+    text-align: left!important;
+  }
+
+  .download-text {
+    font-family: Work Sans;
+    font-size: 16px!important;
+    font-weight: 400!important;
+    line-height: 18px!important;
+    letter-spacing: 0em!important;
+    text-align: left!important;    
+  }
+
+  .web-box, .mobile-box {
+    padding: 0 0 0 0!important;
+  }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -396,7 +435,7 @@ video {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
+  
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
