@@ -24,7 +24,7 @@ function Download() {
               We have made our beautiful services available via our web-app for those who want to use the platform via browser.
               </div>
             </div>
-            <div className="col-12 col-sm-12 col-md-6 order-1 order-sm-1 order-md-2 order-lg-2">
+            <div className="col-12 col-sm-12 col-md-6 order-1 order-sm-1 order-md-2 order-lg-2 py-sm-5 px-0">
               <div className="welcome-header">
               Welcome to next Generation Transactions.
               </div>
@@ -60,7 +60,7 @@ function Download() {
                 </div>
             </div>
             <div className="col-12 col-sm-12 col-md-6">
-              <div className="robot">
+              <div className="robot text-sm-center">
                 <img src={robot} alt="" className='robot-img' />
               </div>
             </div>
