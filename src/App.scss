@@ -16,7 +16,6 @@
   background-position: center;
   background-size: cover;
   padding: 2em 0 1em;
-  min-height: 100vh;
 }
 
 .bg-header {
@@ -152,7 +151,7 @@
 
 .download {
   background: #E9EDFF;
-  padding: 10em 15em 0em;
+  padding: 10em 15em 0em;c
 
   .download-header {
     font-family: Fredoka;
@@ -350,7 +349,7 @@
 }
 
 .coins {
-  padding: 6em 0;
+  padding: 10em 15em 10em;
   background: #310E3A;
 
   .coin-header {
@@ -361,8 +360,16 @@
     letter-spacing: 0em;
     text-align: left;
     color: #FFF;    
-    padding: 0 5em;
   }
+}
+
+.swiper-slide {
+  width: 200px!important;
+}
+
+.coin-carousel {
+  color: #ffffff;
+  background: #310E3A;
 }
 
 

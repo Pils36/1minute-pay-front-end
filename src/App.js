@@ -1,4 +1,5 @@
 import './App.scss';
+import CoinCarousel from './components/CoinCarousel';
 import Coins from './components/Coins';
 import Download from './components/Download';
 import Footer from './components/Footer';
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <Coins />
+      <CoinCarousel />
       <Download />
       <Footer />
     </div>
