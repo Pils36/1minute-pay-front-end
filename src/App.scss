@@ -349,8 +349,13 @@
 }
 
 .coins {
-  padding: 10em 15em 10em;
   background: #310E3A;
+  padding-top: 10em;
+  padding-bottom: 1em;
+  font-family: Fredoka;
+  color: #ffffff;
+  overflow-x: hidden!important;
+
 
   .coin-header {
     font-family: Fredoka;
@@ -370,7 +375,33 @@
 .coin-carousel {
   color: #ffffff;
   background: #310E3A;
+  padding: 2em 0;
+  overflow-x: hidden!important;
+
+  .img-small {
+    width: 136px!important;
+    height: 136!important;
+  }
+  
+  .img-big {
+    width: 174px!important;
+    height: 174!important;
+  }
+  
+  .img-small-mobile {
+    width: 75px!important;
+    height: 75px!important;
+  }
+  
+  .img-big-mobile {
+    width: 100px!important;
+    height: 100px!important;
+  }
+  
 }
+
+
+
 
 
 @media only screen and (max-width: 1300) {
@@ -564,6 +595,18 @@
 
   .welcome-header {
     padding: 1em 0 1em 1em!important ;
+  }
+
+  .coin-carousel {
+    overflow-x: hidden!important;
+  }
+
+  .coin-header {
+    font-family: Fredoka;
+    font-size: 35px!important;
+    font-weight: 400!important;
+    line-height: 35px!important;
+    letter-spacing: 0em!important;
   }
 
 }
