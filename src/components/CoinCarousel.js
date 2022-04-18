@@ -1,9 +1,10 @@
-import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useRef, useState } from 'react';
 import 'swiper/css';
-import { EffectCoverflow, Pagination } from "swiper";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/scrollbar";
+// import required modules
+import { Scrollbar } from "swiper";
 import Binance from '../assets/binance.svg';
 import Tether from '../assets/tether.svg';
 import Tron from '../assets/tron.svg';
@@ -12,6 +13,9 @@ import Ethereum from '../assets/ethereum.svg';
 import Polygon from '../assets/polygon.svg';
 import Litecoin from '../assets/lite-coin.svg';
 import Infinite from '../assets/infinity.svg';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
 
 
 function CoinCarousel() {
@@ -75,6 +79,23 @@ function CoinCarousel() {
                 <img src={Infinite} className="img-small-mobile" alt="infinity" />
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="slider mobile">
+          <Swiper 
+            scrollbar={{
+            hide: false,
+            }}
+            modules={[Scrollbar]}
+            className="swiper"
+            >
+              <SwiperSlide className='swiper-slide'>Slide 1</SwiperSlide>
+              <SwiperSlide className='swiper-slide'>Slide 2</SwiperSlide>
+              <SwiperSlide className='swiper-slide'>Slide 3</SwiperSlide>
+              <SwiperSlide className='swiper-slide'>Slide 4</SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </div>

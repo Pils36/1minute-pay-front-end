@@ -400,6 +400,48 @@
   
 }
 
+.swiper {
+  width: 100%!important;
+  height: 100%!important;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  width: 304px!important;
+  height: 343px!important;
+  background: #3A1344;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  margin: 0 1em;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-scrollbar {
+  background: #3A1344!important;
+}
+
+.swiper-scrollbar-drag {
+  background: #ffffff;
+}
+
+
 
 
 
