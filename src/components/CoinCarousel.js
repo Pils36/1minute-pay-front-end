@@ -87,19 +87,15 @@ function CoinCarousel() {
         <div className="row">
           <div className="slider mobile">
           <Swiper 
-            spaceBetween={30}
             scrollbar={{
             hide: false,
             }}
-            pagination={{
-              clickable: true,
-            }}
-            // modules={[Scrollbar]}
-            modules={[Pagination]}
+            modules={[Scrollbar]}
+            //
             className="swiper mySwiper"
             >
               <SwiperSlide className='swiper-slide'>
-                <div className="slider-content">
+                <div className="swiper-content">
                   <div className="swiper-header">
                     Crypto Buy <br/> and Sale
                   </div>
@@ -109,7 +105,7 @@ function CoinCarousel() {
                 </div>
               </SwiperSlide>
               <SwiperSlide className='swiper-slide'>
-                <div className="slider-content">
+                <div className="swiper-content">
                     <div className="swiper-header">
                     We buy gift <br/> cards at amazing value
                     </div>
@@ -119,7 +115,7 @@ function CoinCarousel() {
                 </div>
               </SwiperSlide>
               <SwiperSlide className='swiper-slide'>
-                <div className="slider-content">
+                <div className="swiper-content">
                   <div className="swiper-header">
                   Bill payments <br/> simplified
                   </div>
@@ -129,7 +125,7 @@ function CoinCarousel() {
                 </div>
               </SwiperSlide>
               <SwiperSlide className='swiper-slide'>
-                <div className="slider-content">
+                <div className="swiper-content">
                   <div className="swiper-header">
                   Transaction tracking <br/> at it’s best
                   </div>
