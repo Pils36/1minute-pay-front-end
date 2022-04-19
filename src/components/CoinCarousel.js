@@ -5,6 +5,8 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 // import required modules
 import { Scrollbar } from "swiper";
+import { Pagination } from "swiper";
+
 import Binance from '../assets/binance.svg';
 import Tether from '../assets/tether.svg';
 import Tron from '../assets/tron.svg';
@@ -85,16 +87,57 @@ function CoinCarousel() {
         <div className="row">
           <div className="slider mobile">
           <Swiper 
+            spaceBetween={30}
             scrollbar={{
             hide: false,
             }}
-            modules={[Scrollbar]}
-            className="swiper"
+            pagination={{
+              clickable: true,
+            }}
+            // modules={[Scrollbar]}
+            modules={[Pagination]}
+            className="swiper mySwiper"
             >
-              <SwiperSlide className='swiper-slide'>Slide 1</SwiperSlide>
-              <SwiperSlide className='swiper-slide'>Slide 2</SwiperSlide>
-              <SwiperSlide className='swiper-slide'>Slide 3</SwiperSlide>
-              <SwiperSlide className='swiper-slide'>Slide 4</SwiperSlide>
+              <SwiperSlide className='swiper-slide'>
+                <div className="slider-content">
+                  <div className="swiper-header">
+                    Crypto Buy <br/> and Sale
+                  </div>
+                  <div className="swiper-text">
+                  We provide a well constructed and safe platform for crypto currencies such as Bitcoin, Ethereum and many others.
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className='swiper-slide'>
+                <div className="slider-content">
+                    <div className="swiper-header">
+                    We buy gift <br/> cards at amazing value
+                    </div>
+                    <div className="swiper-text">
+                    We provide a well constructed and safe platform for crypto currencies such as Bitcoin, Ethereum and many others.
+                    </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className='swiper-slide'>
+                <div className="slider-content">
+                  <div className="swiper-header">
+                  Bill payments <br/> simplified
+                  </div>
+                  <div className="swiper-text">
+                  We provide a well constructed and safe platform for crypto currencies such as Bitcoin, Ethereum and many others.
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className='swiper-slide'>
+                <div className="slider-content">
+                  <div className="swiper-header">
+                  Transaction tracking <br/> at it’s best
+                  </div>
+                  <div className="swiper-text">
+                  We provide a well constructed and safe platform for crypto currencies such as Bitcoin, Ethereum and many others.
+                  </div>
+                </div>
+              </SwiperSlide>
             </Swiper>
           </div>
         </div>
