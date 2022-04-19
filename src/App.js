@@ -7,12 +7,14 @@ import Header from './components/Header';
 // import MainNav from './components/Navbar';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Sidebar from './components/Sidebar';
+import Home from './pages';
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Navbar />
+        <Home/>
       </Router>
       {/* <Header /> */}
       {/* <MainNav /> */}

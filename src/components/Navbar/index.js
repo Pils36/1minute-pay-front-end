@@ -4,12 +4,10 @@ import {
   NavLink, 
   Bars, 
   NavMenu,
-  NavBtn,
-  NavBtnLink
 
 } from './NavbarElements';
 
-function Navbar() {
+function Navbar({toggle}) {
   return (
     <>
       <Nav>
@@ -17,7 +15,7 @@ function Navbar() {
           <h1>Logo</h1>
         </NavLink>
 
-        <Bars/>
+        <Bars onClick={toggle}/>
         <NavMenu>
           <NavLink to="/about" activStyle>About</NavLink>
           <NavLink to="/about" activStyle>Services</NavLink>
