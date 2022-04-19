@@ -1,12 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
 import 'swiper/css';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/scrollbar";
 // import required modules
 import { Scrollbar } from "swiper";
-import { Pagination } from "swiper";
-
 import Binance from '../assets/binance.svg';
 import Tether from '../assets/tether.svg';
 import Tron from '../assets/tron.svg';
