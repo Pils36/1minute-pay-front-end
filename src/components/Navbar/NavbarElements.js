@@ -1,15 +1,33 @@
 import styled from 'styled-components';
 import { NavLink as Link } from 'react-router-dom';
-import { FaBars } from 'react-icons/fa'
-
 
 export const Nav = styled.nav`
-  background: #000;
+  background: transparent;
   height: 80px;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1000px) / 2);
   z-index: 10;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  color: #ffffff;
+`
+
+export const DownloadBtn = styled.div`
+  font-family: 'Work Sans', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0em;
+  color: #ffffff;
+  height: 56px;
+  width: 254px;
+  border-radius: 28px;
+  background: #310E3A;
 `
 
 export const NavLink = styled(Link)`
@@ -26,20 +44,17 @@ export const NavLink = styled(Link)`
   }
 `
 
-export const Bars = styled(FaBars)`
+
+export const MenuBtn = styled.div`
   display: none;
-  color: #fff;
 
   @media screen and (max-width: 768px) {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 75%);
-    font-size: 1.8rem;
+    padding: 0 1em;
     cursor: pointer;
   }
 `
+
 
 export const NavMenu = styled.div`
   display: flex;

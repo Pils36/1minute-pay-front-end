@@ -1,5 +1,4 @@
 import React from 'react';
-import Nav from './Nav';
 import Arrow from '../assets/arrow-down.svg';
 import BoxEth from '../assets/ethereum-box.svg';
 import BoxAmazon from '../assets/amazon-box.svg';
@@ -7,7 +6,8 @@ import Line from '../assets/line.svg';
 import Andriod from '../assets/andriod.svg';
 import Apple from '../assets/apple.svg';
 import Video from '../assets/bg-video.mp4';
-
+import Home from './../pages/index';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function Header() {
   return (
@@ -15,7 +15,10 @@ function Header() {
       <video autoPlay muted loop className='bg-header'>
         <source  src={Video} type='video/mp4' />
       </video>
-      <Nav />
+      <Router>
+        <Home />
+        
+      </Router>
       <main className='container'>
         <div className="main">
           <div className="row">

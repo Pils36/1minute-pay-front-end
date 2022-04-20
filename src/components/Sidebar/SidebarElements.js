@@ -8,7 +8,7 @@ export const SidebarContainer = styled.aside`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #0d0d0d;
+  background: #6B7ED6;
   display: grid;
   align-items: center;
   align-items: center;
@@ -26,11 +26,14 @@ export const CloseIcon = styled(FaTimes)`
 export const Icon = styled.div`
   position: absolute;
   top: 1.2rem;
-  right: 1.2rem;
+  display: flex ;
+  padding: 2em 1em;
+  justify-content: space-between;
+  width: 100%;
   background: transparent;
-  font-size: 2rem;
   cursor: pointer;
   outline: none;
+  padding: 2em;
 `
 
 export const SidebarWrapper = styled.div`
@@ -47,22 +50,32 @@ export const SidebarMenu = styled.ul`
   @media screen and (max-width: 480px) {
     grid-template-rows: repeat(6, 60px);
   }
+
+  @media screen and (max-width: 375px) {
+    grid-template-rows: repeat(6, 60px);
+    padding-top: 6em;
+  }
 `
 
 export const SidebarLink = styled(LinkS)`
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
+  font-family: Fredoka;
+  font-size: 40px!important;
+  font-weight: 400;
+  line-height: 60px;
+  letter-spacing: 0em;
+  text-align: left;
   text-decoration: none;
   list-style: none;
   transition: 0.2s ease-in-out;
   text-decoration: none;
   color: #fff;
   cursor: pointer;
+  padding: 0 1em;
 
   &:hover {
-    color: #01bf71;
+    color: #4B2A85;
     transition: 0.2s ease-in-out;
   } 
 `
@@ -70,6 +83,7 @@ export const SidebarLink = styled(LinkS)`
 export const SideBtnWrap = styled.div`
   display: flex;
   justify-content: center;
+  padding: 0 1em;
 `
 
 export const SidebarRoute = styled(LinkR)`

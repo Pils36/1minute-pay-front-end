@@ -149,6 +149,54 @@
   }
 }
 
+.cryptobox-mobile {
+  .box-img-mobile {
+    margin-bottom: 1em;
+  }
+
+  .box-purple-mobile {
+    padding: 15px 1em;
+    width: 173px;
+    height: 141px;
+    background: rgba(49, 14, 58, 0.8);
+    border-radius: 18px 0px 0px 18px;
+  }
+  
+  .box-grey-mobile {
+    padding: 15px 1em;
+    width: 173px;
+    height: 141px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0px 18px 18px 0px;
+  }
+
+  .box-text {
+    margin: 10px 0;
+  }
+  
+  .head-text-mobile {
+    color: #ffffff;
+    font-family: Fredoka;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+  }
+
+  .head-text-mobile-right {
+    color: #ffffff;
+    font-family: Fredoka;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: right;
+  }
+
+}
+
+
+
 .download {
   background: #E9EDFF;
   padding: 10em 15em 0em;c
