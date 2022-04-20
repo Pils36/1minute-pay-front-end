@@ -83,6 +83,23 @@ function CoinCarousel() {
         </div>
 
         <div className="row">
+          <div className="container">
+            <div className="d-flex">
+              <div className="crypto">Crypto</div>
+              <div className="giftcards">Gift-Cards</div>
+            </div>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="container">
+            <div className="company">
+              THIS IS WHY WE EXIST AS A COMPANY
+            </div>
+          </div>
+        </div>
+
+        <div className="row">
           <div className="slider mobile">
           <Swiper 
             scrollbar={{
