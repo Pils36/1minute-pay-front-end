@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { 
   SidebarContainer, 
   Icon, 
@@ -6,16 +6,26 @@ import {
   SidebarMenu,
   SidebarLink,
   SideBtnWrap,
-  SidebarRoute
  } from './SidebarElements';
  import CloseBtn from '../../assets/menu-close.svg';
  import Logo from '../../assets/logo.svg';
 import BoxEth from '../../assets/ethereum-box.svg';
 import BoxAmazon from '../../assets/amazon-box.svg';
+import About from './About';
 
 const Sidebar = ({isOpen, toggle}) => {
+  const [about, setAbout] = useState(false);
+
+  const showModal = () => {
+    // toggle()
+    setAbout(prev => !prev);
+    // isOpen = !isOpen
+    console.log("about is clicked")
+  }
+
   return (
-    <SidebarContainer isOpen={isOpen} onClick={toggle}>
+    <SidebarContainer isOpen={isOpen} >
+      {about && <About showModal={showModal} /> }
       <Icon className='d-flex justify-content-between'>
         <img src={Logo} alt="logo" />
         <img src={CloseBtn} alt="close-btn" onClick={toggle} />
@@ -23,16 +33,16 @@ const Sidebar = ({isOpen, toggle}) => {
 
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about" onClick={toggle}>
+          <SidebarLink to="about">
             Homepage
           </SidebarLink>
-          <SidebarLink to="discover" onClick={toggle}>
+          <SidebarLink to="discover" onClick={showModal}>
             About Us
           </SidebarLink>
-          <SidebarLink to="services" onClick={toggle}>
+          <SidebarLink to="services" >
             Sign-In
           </SidebarLink>
-          <SidebarLink to="contact" onClick={toggle}>
+          <SidebarLink to="contact">
             Sign-Up
           </SidebarLink>
         </SidebarMenu>

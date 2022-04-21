@@ -423,7 +423,21 @@
   line-height: 20px;
   letter-spacing: 0em;
   text-align: left;
+  border: 1px solid #52345A;
+  box-sizing: border-box;
+  border-radius: 19.5px;
+  padding: .5em 1em;
+}
 
+.giftcards {
+  color: #52345A;
+  font-family: Work Sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;  
+  margin: 0 1em;
 }
 
 .company {
@@ -463,6 +477,75 @@
   }
   
 }
+
+//about modal
+.about {
+  position: absolute;
+  z-index: 100!important;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  color: white;
+
+  img {
+    cursor: pointer;
+  }
+
+  .overlay {
+    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  
+  .about-box {
+    width: 304px;
+    height: 486px;
+    left: 36px;
+    top: 165px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    color: #310E3A;
+    padding: 1.5em;
+  }
+
+  .about-text {
+    margin-top: 2em;
+  }
+
+  .about-head {
+    font-family: Fredoka;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #BC9CC3;
+    margin: 1.5em 0 1em;
+  }
+
+  .about-body {
+    font-family: Work Sans!important;
+    font-size: 16px!important;
+    line-height: 18px!important;
+    letter-spacing: 0em!important;
+    text-align: left!important;
+
+  }
+
+  .lead {
+    font-size: 16px!important;
+    font-weight: 400!important;
+    color: #52345A!important;
+    margin: 1em 0 ;    
+  }
+}
+
+
 
 .swiper {
   width: 100%!important;

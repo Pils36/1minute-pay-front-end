@@ -84,24 +84,88 @@ function CoinCarousel() {
 
         <div className="row">
           <div className="container">
-            <div className="d-flex">
-              <div className="crypto">Crypto</div>
-              <div className="giftcards">Gift-Cards</div>
+            <div className="col-12 col-sm-12 col-md-10 col-lg-9 m-auto">
+              <div className="container">
+                <div className="d-flex align-items-center my-3">
+                  <div className="crypto">Crypto</div>
+                  <div className="giftcards">Gift-Cards</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="row">
           <div className="container">
-            <div className="company">
-              THIS IS WHY WE EXIST AS A COMPANY
+            <div className="col-12 col-sm-12 col-md-10 col-lg-9 m-auto">
+              <div className="container">
+                <div className="company">
+                  THIS IS WHY WE EXIST AS A COMPANY
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="row">
+        <div className="row d-block d-sm-block d-md-none d-lg-none">
           <div className="slider mobile">
           <Swiper 
+            scrollbar={{
+            hide: false,
+            }}
+            modules={[Scrollbar]}
+            //
+            className="swiper mySwiper"
+            >
+              <SwiperSlide className='swiper-slide'>
+                <div className="swiper-content">
+                  <div className="swiper-header">
+                    Crypto Buy <br/> and Sale
+                  </div>
+                  <div className="swiper-text">
+                  We provide a well constructed and safe platform for crypto currencies such as Bitcoin, Ethereum and many others.
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className='swiper-slide'>
+                <div className="swiper-content">
+                    <div className="swiper-header">
+                    We buy gift <br/> cards at amazing value
+                    </div>
+                    <div className="swiper-text">
+                    We provide a well constructed and safe platform for crypto currencies such as Bitcoin, Ethereum and many others.
+                    </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className='swiper-slide'>
+                <div className="swiper-content">
+                  <div className="swiper-header">
+                  Bill payments <br/> simplified
+                  </div>
+                  <div className="swiper-text">
+                  We provide a well constructed and safe platform for crypto currencies such as Bitcoin, Ethereum and many others.
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className='swiper-slide'>
+                <div className="swiper-content">
+                  <div className="swiper-header">
+                  Transaction tracking <br/> at it’s best
+                  </div>
+                  <div className="swiper-text">
+                  We provide a well constructed and safe platform for crypto currencies such as Bitcoin, Ethereum and many others.
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+        </div>
+
+        <div className="row d-none d-sm-none d-md-block d-md-block">
+          <div className="slider mobile">
+          <Swiper 
+            slidesPerView={1}
+            loop={true}
             scrollbar={{
             hide: false,
             }}
