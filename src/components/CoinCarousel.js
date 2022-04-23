@@ -161,7 +161,7 @@ function CoinCarousel() {
           </div>
         </div>
 
-        <div className="row d-none d-sm-none d-md-block d-md-block">
+        {/* <div className="row d-none d-sm-none d-md-block d-md-block">
           <div className="slider mobile">
           <Swiper 
             slidesPerView={1}
@@ -215,7 +215,7 @@ function CoinCarousel() {
               </SwiperSlide>
             </Swiper>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )
