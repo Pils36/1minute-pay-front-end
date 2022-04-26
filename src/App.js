@@ -8,11 +8,12 @@ import Header from './components/Header';
 function App() {
   return (
     <div className="App">
-      <Header />
+    <h1>Bento</h1>
+      {/* <Header />
       <Coins />
       <CoinCarousel />
       <Download />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
