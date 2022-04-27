@@ -12,7 +12,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 function Header() {
   return (
     <div className="header">
-      <video autoPlay muted loop className='bg-header'>
+      <video muted autoPlay loop className='bg-header'>
         <source  src={Video} type='video/mp4' />
       </video>
       <Router>
