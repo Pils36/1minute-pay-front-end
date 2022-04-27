@@ -6,13 +6,14 @@ import Line from '../assets/line.svg';
 import Andriod from '../assets/andriod.svg';
 import Apple from '../assets/apple.svg';
 import Video from '../assets/bg-video.mp4';
+import Poster from '../assets/bg.svg'
 import Home from './../pages/index';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 function Header() {
   return (
     <div className="header">
-      <video muted autoPlay loop className='bg-header'>
+      <video muted autoPlay loop poster={Poster} className='bg-header'>
         <source  src={Video} type='video/mp4' />
       </video>
       <Router>
