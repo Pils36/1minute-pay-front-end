@@ -161,61 +161,35 @@ function CoinCarousel() {
           </div>
         </div>
 
-        {/* <div className="row d-none d-sm-none d-md-block d-md-block">
-          <div className="slider mobile">
-          <Swiper 
-            slidesPerView={1}
-            loop={true}
-            scrollbar={{
-            hide: false,
-            }}
-            modules={[Scrollbar]}
-            //
-            className="swiper mySwiper"
-            >
-              <SwiperSlide className='swiper-slide'>
-                <div className="swiper-content">
-                  <div className="swiper-header">
-                    Crypto Buy <br/> and Sale
+       <div className="row d-none d-sm-none d-md-block d-md-block">
+          <div className="container">
+            <div className="col-12 col-sm-12 cpl-md-10 col-lg-9 m-auto">
+              <div className="container">
+                <div className="slider desktop">
+                  <div className="scroll-box">
+                    <div className="scroll-header">Crypto Buy <br/> and Sale</div>
+                    <div className="scroll-lead">We provide a well constructed and safe platform<br/> for crypto currencies such as Bitcoin, Ethereum <br/> and many others.</div>
                   </div>
-                  <div className="swiper-text">
-                  We provide a well constructed and safe platform for crypto currencies such as Bitcoin, Ethereum and many others.
+
+                  <div className="scroll-box scroll-disabled">
+                    <div className="scroll-header">We buy gift cards <br/> at amazing value</div>
+                    <div className="scroll-lead">We provide a well constructed and safe platform<br/> for crypto currencies such as Bitcoin, Ethereum <br/> and many others.</div>
                   </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className='swiper-slide'>
-                <div className="swiper-content">
-                    <div className="swiper-header">
-                    We buy gift <br/> cards at amazing value
-                    </div>
-                    <div className="swiper-text">
-                    We provide a well constructed and safe platform for crypto currencies such as Bitcoin, Ethereum and many others.
-                    </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide className='swiper-slide'>
-                <div className="swiper-content">
-                  <div className="swiper-header">
-                  Bill payments <br/> simplified
+
+                  <div className="scroll-box scroll-disabled">
+                    <div className="scroll-header">Bill payments <br/> simplified</div>
+                    <div className="scroll-lead">We provide a well constructed and safe platform<br/> for crypto currencies such as Bitcoin, Ethereum <br/> and many others.</div>
                   </div>
-                  <div className="swiper-text">
-                  We provide a well constructed and safe platform for crypto currencies such as Bitcoin, Ethereum and many others.
+
+                  <div className="scroll-box scroll-disabled">
+                    <div className="scroll-header">Transaction <br/> tracking at it’s best</div>
+                    <div className="scroll-lead">We provide a well constructed and safe platform<br/> for crypto currencies such as Bitcoin, Ethereum <br/> and many others.</div>
                   </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide className='swiper-slide'>
-                <div className="swiper-content">
-                  <div className="swiper-header">
-                  Transaction tracking <br/> at it’s best
-                  </div>
-                  <div className="swiper-text">
-                  We provide a well constructed and safe platform for crypto currencies such as Bitcoin, Ethereum and many others.
-                  </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
+              </div>
+            </div>
           </div>
-        </div> */}
+        </div> 
       </div>
     </section>
   )
