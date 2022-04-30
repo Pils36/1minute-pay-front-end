@@ -449,6 +449,7 @@
   text-align: left;  
   color: #BC9CC3;
   margin: 3em 0 2em;
+  padding-left: 4em;
 }
 
 .coin-carousel {
@@ -584,13 +585,11 @@
 
 .swiper-scrollbar {
   background: #3A1344!important;
-  // margin: 2em 0!important;
 }
 
 .swiper-scrollbar-drag {
   background: #ffffff!important;
   width: 96px!important;
-  // margin: 2em 0!important;
 }
 
 .swiper-content {
@@ -617,10 +616,18 @@
   }
 }
 
-
+.desktop {
+  border-left: .7px solid #472A4F;
+  padding: .5em 0 1em 3em;
+}
 
 .scroll-box {
   margin-bottom: 6em;
+
+  .scroll-disabled {
+    color: #52345A!important;
+  }
+  
 
   .scroll-header {
     font-family: Fredoka;
@@ -629,7 +636,8 @@
     line-height: 40px;
     letter-spacing: 0em;
     text-align: left; 
-    color: #BC9CC3;   
+    color: #BC9CC3;
+    margin-bottom: .5em;   
   }
 
   .scroll-lead {
@@ -646,9 +654,7 @@
 
   }
 
-  .scroll-disabled {
-    color: #52345A!important;
-  }
+
 }
 
 

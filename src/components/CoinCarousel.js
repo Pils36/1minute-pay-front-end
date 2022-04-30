@@ -171,19 +171,19 @@ function CoinCarousel() {
                     <div className="scroll-lead">We provide a well constructed and safe platform<br/> for crypto currencies such as Bitcoin, Ethereum <br/> and many others.</div>
                   </div>
 
-                  <div className="scroll-box scroll-disabled">
-                    <div className="scroll-header">We buy gift cards <br/> at amazing value</div>
-                    <div className="scroll-lead">We provide a well constructed and safe platform<br/> for crypto currencies such as Bitcoin, Ethereum <br/> and many others.</div>
+                  <div className="scroll-box">
+                    <div className="scroll-header scroll-disabled">We buy gift cards <br/> at amazing value</div>
+                    <div className="scroll-lead scroll-disabled">We provide a well constructed and safe platform<br/> for crypto currencies such as Bitcoin, Ethereum <br/> and many others.</div>
                   </div>
 
-                  <div className="scroll-box scroll-disabled">
-                    <div className="scroll-header">Bill payments <br/> simplified</div>
-                    <div className="scroll-lead">We provide a well constructed and safe platform<br/> for crypto currencies such as Bitcoin, Ethereum <br/> and many others.</div>
+                  <div className="scroll-box ">
+                    <div className="scroll-header scroll-disabled">Bill payments <br/> simplified</div>
+                    <div className="scroll-lead scroll-disabled">We provide a well constructed and safe platform<br/> for crypto currencies such as Bitcoin, Ethereum <br/> and many others.</div>
                   </div>
 
-                  <div className="scroll-box scroll-disabled">
-                    <div className="scroll-header">Transaction <br/> tracking at it’s best</div>
-                    <div className="scroll-lead">We provide a well constructed and safe platform<br/> for crypto currencies such as Bitcoin, Ethereum <br/> and many others.</div>
+                  <div className="scroll-box">
+                    <div className="scroll-header scroll-disabled">Transaction <br/> tracking at it’s best</div>
+                    <div className="scroll-lead scroll-disabled">We provide a well constructed and safe platform<br/> for crypto currencies such as Bitcoin, Ethereum <br/> and many others.</div>
                   </div>
                 </div>
               </div>
