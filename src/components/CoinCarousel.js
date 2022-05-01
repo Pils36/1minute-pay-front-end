@@ -100,7 +100,7 @@ function CoinCarousel() {
             <div className="col-12 col-sm-12 col-md-10 col-lg-9 m-auto">
               <div className="container">
                 <div className="company">
-                  THIS IS WHY WE EXIST AS A COMPANY
+                    THIS IS WHY WE EXIST AS A COMPANY
                 </div>
               </div>
             </div>
