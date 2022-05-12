@@ -77,7 +77,8 @@ export const SidebarLink = styled(LinkS)`
   &:hover {
     color: #4B2A85;
     transition: 0.2s ease-in-out;
-  } 
+  }
+  
 `
 
 export const SideBtnWrap = styled.div`

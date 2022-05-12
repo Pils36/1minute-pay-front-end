@@ -1,13 +1,36 @@
-*, html, ::after, ::before {
+// Fredoka font
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap");
+
+// Work sans
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// roboto
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$header-font: "Fredoka", sans-serif;
+$body-text-font: "Work Sans", sans-serif;
+$font-stack-three: "Roboto", sans-serif;
+
+*,
+html,
+::after,
+::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
 .app {
-  margin: 0!important;
-  padding: 0!important;
-  box-sizing: border-box!important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+@media screen and (min-width: 1440px) {
+  .custom-container {
+    width: 1046px;
+    margin: auto;
+  }
 }
 
 .header {
@@ -32,14 +55,15 @@
   .navbar-toggler:focus,
   .navbar-toggler:active,
   .navbar-toggler-icon:focus {
-      outline: none;
-      box-shadow: none;
+    outline: none;
+    box-shadow: none;
   }
 }
 
 .navbar-nav {
-  li a, p {
-    font-family: 'Work Sans', sans-serif;
+  li a,
+  p {
+    font-family: $body-text-font;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -50,7 +74,7 @@
 }
 
 .btn-download-purple {
-  font-family: 'Work Sans', sans-serif;
+  font-family: $body-text-font;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -59,13 +83,12 @@
   height: 56px;
   width: 254px;
   border-radius: 28px;
-  background: #310E3A;
+  background: #310e3a;
 }
 
 .main {
   padding-top: 10em;
   padding-bottom: 1em;
-  font-family: Fredoka;
   color: #ffffff;
 
   .main-header {
@@ -74,6 +97,7 @@
     line-height: 60px;
     letter-spacing: 0em;
     text-align: left;
+    font-family: $header-font;
   }
 
   .main-text {
@@ -82,21 +106,34 @@
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 0em;
-    text-align: left;      
+    text-align: left;
+    font-family: $body-text-font;
   }
 }
 
+.condition {
+  padding-bottom: 3em;
+}
+
 .header-bottom {
-  padding: 8em 1em 0em 10em ;
+  // padding: 8em 1em 0em 10em ;
+  padding-top: 8em;
 }
 
 .scroll-text {
-  font-family: Roboto;
+  font-family: $font-stack-three;
   font-size: 10px;
   font-weight: 400;
   line-height: 12px;
   letter-spacing: 0em;
-  color: #ffffff;   
+  color: #ffffff;
+}
+
+//
+
+.crypto-card {
+  position: absolute;
+  right: 1em;
 }
 
 .cryptobox {
@@ -107,7 +144,7 @@
     background: rgba(49, 14, 58, 0.8);
     border-radius: 18px 0px 0px 18px;
   }
-  
+
   .box-grey {
     padding: 15px 2em;
     width: 234px;
@@ -119,9 +156,9 @@
   .box-text {
     margin: 10px 0;
   }
-  
+
   .head-text {
-    font-family: Fredoka;
+    font-family: $header-font;
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -130,22 +167,21 @@
   }
 
   .body-text-purple {
-    font-family: Work Sans;
+    font-family: $body-text-font;
     font-size: 11px;
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0em;
-    color: #AE91E0;
-
+    color: #ae91e0;
   }
 
   .body-text-grey {
-    font-family: Work Sans;
+    font-family: $body-text-font;
     font-size: 11px;
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0em;
-    color: #9B9B9B;
+    color: #9b9b9b;
   }
 }
 
@@ -161,7 +197,7 @@
     background: rgba(49, 14, 58, 0.8);
     border-radius: 18px 0px 0px 18px;
   }
-  
+
   .box-grey-mobile {
     padding: 15px 1em;
     width: 173px;
@@ -173,10 +209,10 @@
   .box-text {
     margin: 10px 0;
   }
-  
+
   .head-text-mobile {
     color: #ffffff;
-    font-family: Fredoka;
+    font-family: $header-font;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -185,63 +221,61 @@
 
   .head-text-mobile-right {
     color: #ffffff;
-    font-family: Fredoka;
+    font-family: $header-font;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0em;
     text-align: right;
   }
-
 }
 
-
-
 .download {
-  background: #E9EDFF;
-  padding: 10em 15em 0em;c
+  background: #e9edff;
+  // padding: 10em 15em 0em;
+  padding: 10em 0 0em;
 
   .download-header {
-    font-family: Fredoka;
+    font-family: $header-font;
     font-size: 25px;
     font-weight: 400;
     line-height: 40px;
     letter-spacing: 0em;
-    text-align: left; 
-    color: #52345A;   
-    margin: .5em 0; 
+    text-align: left;
+    color: #52345a;
+    margin: 0.5em 0;
   }
 
   .download-text {
-    font-family: Work Sans;
+    font-family: $body-text-font;
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
     letter-spacing: 0em;
     text-align: left;
-    color: #BB9CC3;
+    color: #bb9cc3;
   }
 
   .welcome-header {
-    font-family: Fredoka;
+    font-family: $header-font;
     font-size: 50px;
     font-weight: 400;
     line-height: 50px;
     letter-spacing: 0em;
-    text-align: left;   
-    color: #4B2A85; 
+    text-align: left;
+    color: #4b2a85;
   }
 
   .line {
-    padding: 2em 0 ;
+    padding: 2em 0;
   }
 
   .web-box {
-    padding: 0 6em 0 3em;
+    padding: 0 6em 0 2em;
   }
 
   .mobile-box {
-    padding: 0 6em 0 3em;
+    padding: 0 6em 0 2em;
   }
 
   .line {
@@ -249,7 +283,7 @@
   }
 
   .btn-download-black {
-    font-family: 'Work Sans', sans-serif;
+    font-family: "Work Sans", sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -264,52 +298,51 @@
 }
 
 .footer {
-  background: #E4AD52;
+  background: #e4ad52;
   padding: 10em 0em 5em;
   position: relative;
   z-index: 2;
 
-
   .countdown {
     z-index: 2;
     position: absolute;
-    top: -4em ; 
-    left: 50%; 
+    top: -4em;
+    left: 50%;
     transform: translate(-50%);
-    border-radius: 40px;  
-    background: #F3F5FF;
-    padding: 5em;  
+    border-radius: 40px;
+    background: #f3f5ff;
+    padding: 5em;
     width: 1106px;
   }
 
   .countdown-heading {
-    font-family: Fredoka;
+    font-family: $header-font;
     font-size: 30px;
     font-weight: 400;
     line-height: 35px;
     letter-spacing: 0em;
     text-align: left;
-    color: #4B2A85;
+    color: #4b2a85;
   }
 
   .countdown-number {
-    font-family: Fredoka;
+    font-family: $header-font;
     font-size: 50px;
     font-weight: 400;
     line-height: 35px;
     letter-spacing: 0em;
     text-align: left;
-    color: #BB9CC3;    
+    color: #bb9cc3;
   }
 
   .countdown-text {
-    font-family: Work Sans;
+    font-family: $body-text-font;
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
     letter-spacing: 0em;
     text-align: center;
-    color: #52345A;    
+    color: #52345a;
     margin: 1em 0;
   }
 
@@ -317,56 +350,55 @@
     padding: 5em 15em;
 
     .community-head {
-      font-family: Fredoka;
+      font-family: $header-font;
       font-size: 70px;
       font-weight: 400;
       line-height: 60px;
       letter-spacing: 0em;
       text-align: left;
-      color: #310E3A;      
+      color: #310e3a;
     }
 
     .community-text {
-      font-family: Work Sans;
+      font-family: $body-text-font;
       font-size: 14px;
       font-weight: 400;
       line-height: 16px;
       letter-spacing: 0em;
       text-align: left;
       margin: 4em 0 2em;
-      color: #52345A;      
+      color: #52345a;
     }
   }
 
   .email {
-    font-family: Fredoka;
+    font-family: $header-font;
     font-size: 18px;
     font-weight: 400;
     line-height: 16px;
     letter-spacing: 0em;
     text-align: left;
     color: #ffffff;
-    padding: 2em 0;    
+    padding: 2em 0;
   }
 
   .email-text {
-    font-family: Work Sans;
+    font-family: $body-text-font;
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
     letter-spacing: 0em;
     text-align: right;
     color: #ffffff;
-    padding: 2em 0;    
+    padding: 2em 0;
   }
 
   .footer-border {
-    border-bottom: 1px solid #F8BC5B;
+    border-bottom: 1px solid #f8bc5b;
   }
 
   .faq-border {
-    border-top: 1px solid #F8BC5B;
-
+    border-top: 1px solid #f8bc5b;
   }
 
   .footer-logo {
@@ -374,7 +406,7 @@
   }
 
   .address {
-    font-family: Work Sans;
+    font-family: $body-text-font;
     font-size: 16px;
     font-weight: 400;
     line-height: 18px;
@@ -384,106 +416,107 @@
     color: #000000;
   }
 
-  .copyright, .signature {
-    font-family: Work Sans;
+  .copyright,
+  .signature {
+    font-family: $body-text-font;
     font-size: 12px;
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0em;
-    text-align: right;    
+    text-align: right;
     margin: 1.5em 0;
     color: #000000;
   }
 }
 
-.coins {
-  background: #310E3A;
-  padding-top: 10em;
-  padding-bottom: 1em;
-  font-family: Fredoka;
-  color: #ffffff;
-  overflow-x: hidden!important;
+// coin section
 
+.coins {
+  background: #310e3a;
+  padding: 10em 0;
+  font-family: $header-font;
+  color: #ffffff;
+  overflow-x: hidden !important;
 
   .coin-header {
-    font-family: Fredoka;
+    max-width: 741px;
+    font-family: $header-font;
     font-size: 50px;
     font-weight: 400;
     line-height: 60px;
     letter-spacing: 0em;
     text-align: left;
-    color: #FFF;    
+    color: #fff;
   }
 }
 
 .crypto {
-  font-family: Work Sans;
+  font-family: $body-text-font;
   font-size: 18px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0em;
   text-align: left;
-  border: 1px solid #52345A;
+  border: 1px solid #52345a;
   box-sizing: border-box;
   border-radius: 19.5px;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
 }
 
 .giftcards {
-  color: #52345A;
-  font-family: Work Sans;
+  color: #52345a;
+  font-family: $body-text-font;
   font-size: 18px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0em;
-  text-align: left;  
+  text-align: left;
   margin: 0 1em;
 }
 
 .company {
-  font-family: Work Sans;
+  font-family: $body-text-font;
   font-size: 10px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0em;
-  text-align: left;  
-  color: #BC9CC3;
+  text-align: left;
+  color: #bc9cc3;
   margin: 3em 0 2em;
   padding-left: 4em;
 }
 
 .coin-carousel {
   color: #ffffff;
-  background: #310E3A;
-  padding: 2em 0;
-  overflow-x: hidden!important;
+  background: #310e3a;
+  padding: 2em 0 0;
+  overflow-x: hidden !important;
 
   .img-small {
-    width: 136px!important;
-    height: 136!important;
+    width: 136px !important;
+    height: 136 !important;
   }
-  
+
   .img-big {
-    width: 174px!important;
-    height: 174!important;
+    width: 174px !important;
+    height: 174 !important;
   }
-  
+
   .img-small-mobile {
-    width: 75px!important;
-    height: 75px!important;
+    width: 75px !important;
+    height: 75px !important;
   }
-  
+
   .img-big-mobile {
-    width: 100px!important;
-    height: 100px!important;
+    width: 100px !important;
+    height: 100px !important;
   }
-  
 }
 
 //about modal
 .about {
   position: absolute;
-  z-index: 100!important;
+  z-index: 100 !important;
   top: 0;
   right: 0;
   left: 0;
@@ -503,15 +536,15 @@
     display: grid;
     place-items: center;
   }
-  
+
   .about-box {
     width: 304px;
     height: 486px;
     left: 36px;
     top: 165px;
-    background: #FFFFFF;
+    background: #ffffff;
     border-radius: 20px;
-    color: #310E3A;
+    color: #310e3a;
     padding: 1.5em;
   }
 
@@ -520,46 +553,43 @@
   }
 
   .about-head {
-    font-family: Fredoka;
+    font-family: $header-font;
     font-size: 30px;
     font-weight: 400;
     line-height: 30px;
     letter-spacing: 0em;
     text-align: left;
-    color: #BC9CC3;
+    color: #bc9cc3;
     margin: 1.5em 0 1em;
   }
 
   .about-body {
-    font-family: Work Sans!important;
-    font-size: 16px!important;
-    line-height: 18px!important;
-    letter-spacing: 0em!important;
-    text-align: left!important;
-
+    font-family: $body-text-font !important;
+    font-size: 16px !important;
+    line-height: 18px !important;
+    letter-spacing: 0em !important;
+    text-align: left !important;
   }
 
   .lead {
-    font-size: 16px!important;
-    font-weight: 400!important;
-    color: #52345A!important;
-    margin: 1em 0 ;    
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    color: #52345a !important;
+    margin: 1em 0;
   }
 }
 
-
-
 .swiper {
-  width: 100%!important;
-  height: 100%!important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  width: 343px!important;
-  height: 343px!important;
-  background: #3A1344;
+  width: 343px !important;
+  height: 343px !important;
+  background: #3a1344;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -584,101 +614,89 @@
 }
 
 .swiper-scrollbar {
-  background: #3A1344!important;
+  background: #3a1344 !important;
 }
 
 .swiper-scrollbar-drag {
-  background: #ffffff!important;
-  width: 96px!important;
+  background: #ffffff !important;
+  width: 96px !important;
 }
 
 .swiper-content {
-  padding: 2em 2em!important;
-  color: #BC9CC3;
+  padding: 2em 2em !important;
+  color: #bc9cc3;
 
   .swiper-header {
-    font-family: Fredoka!important;
-    font-size: 30px!important;
-    font-weight: 400!important;
-    line-height: 30px!important;
-    letter-spacing: 0em!important;
-    text-align: left!important; 
-    margin-bottom: 1em; 
+    font-family: $header-font !important;
+    font-size: 30px !important;
+    font-weight: 400 !important;
+    line-height: 30px !important;
+    letter-spacing: 0em !important;
+    text-align: left !important;
+    margin-bottom: 1em;
   }
-  
+
   .swiper-text {
-    font-family: Work Sans!important;
-    font-size: 16px!important;
-    font-weight: 400!important;
-    line-height: 18px!important;
-    letter-spacing: 0em!important;
-    text-align: left!important;
+    font-family: $body-text-font !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    letter-spacing: 0em !important;
+    text-align: left !important;
   }
 }
 
 .desktop {
-  border-left: .7px solid #472A4F;
-  padding: .5em 0 1em 3em;
+  border-left: 0.7px solid #472a4f;
+  padding: 0.5em 0 1em 3em;
+}
+
+.scroll-disabled {
+  transition: all ease 5s;
+  .scroll-header,
+  .scroll-lead {
+    color: #52345a !important;
+  }
 }
 
 .scroll-box {
   margin-bottom: 6em;
 
-  .scroll-disabled {
-    color: #52345A!important;
-  }
-  
-
   .scroll-header {
-    font-family: Fredoka;
+    font-family: $header-font;
     font-size: 40px;
     font-weight: 400;
     line-height: 40px;
     letter-spacing: 0em;
-    text-align: left; 
-    color: #BC9CC3;
-    margin-bottom: .5em;   
+    text-align: left;
+    color: #bc9cc3;
+    margin-bottom: 0.5em;
   }
 
   .scroll-lead {
-    font-family: Work Sans;
+    font-family: $body-text-font;
     font-size: 14px;
     font-weight: 400;
     line-height: 16px;
     letter-spacing: 0em;
-    text-align: left;    
-    color: #D0B3D8;
+    text-align: left;
+    color: #d0b3d8;
   }
 
   .scroll-active {
-
   }
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media only screen and (max-width: 1300) {
   .community {
-    padding: 5em 15em!important;
+    padding: 5em 15em !important;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 1226px) {
   .download {
-    padding: 4em 4em 0em!important;
+    padding: 4em 4em 0em !important;
   }
 
   .robot-img {
@@ -687,24 +705,24 @@
   }
 
   .countdown {
-    width: 1000px!important;
-    padding: 4em!important;
+    width: 1000px !important;
+    padding: 4em !important;
   }
 
   .community {
-    padding: 18em 8em 5em!important;
+    padding: 18em 8em 5em !important;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 1055px) {
   .countdown {
-    width: 900px!important;
-    padding: 4em!important;
+    width: 900px !important;
+    padding: 4em !important;
   }
 
   .community {
-    padding: 18em 8em 5em!important;
+    padding: 18em 8em 5em !important;
   }
 }
 
@@ -713,27 +731,27 @@
   .main {
     padding: 6em 0em 1em;
   }
-  
+
   .main-header {
-    font-family: Fredoka;
-    font-size: 40px!important;
-    font-weight: 400!important;
-    line-height: 40px!important;
+    // font-family: $header-font;
+    font-size: 40px !important;
+    // font-weight: 400!important;
+    line-height: 40px !important;
     letter-spacing: 0em;
-    text-align: left;   
+    text-align: left;
   }
 
   .main-text {
-    font-family: Work Sans;
-    font-size: 18px!important;
-    font-weight: 500!important;
-    line-height: 20px!important;
-    letter-spacing: 0em!important;
-    text-align: left;      
+    font-family: $body-text-font;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    line-height: 20px !important;
+    letter-spacing: 0em !important;
+    text-align: left;
   }
 
   .header-bottom {
-    padding: 1em 1em 0em 10em !important ;
+    padding: 1em 1em 0em 3em !important ;
   }
 
   .robot-img {
@@ -742,39 +760,40 @@
   }
 
   .download {
-    padding: 5em 5em 0em!important;
+    padding: 5em 5em 0em !important;
   }
 
   .welcome-header {
-    font-family: Fredoka;
-    font-size: 35px!important;
-    font-weight: 400!important;
-    line-height: 35px!important;
-    letter-spacing: 0em!important;
-    text-align: left!important;
+    font-family: $header-font;
+    font-size: 35px !important;
+    font-weight: 400 !important;
+    line-height: 35px !important;
+    letter-spacing: 0em !important;
+    text-align: left !important;
     padding: 2em 0 !important;
   }
 
   .download-header {
-    font-family: Fredoka;
-    font-size: 22px!important;
-    font-weight: 400!important;
-    line-height: 40px!important;
-    letter-spacing: 0em!important;
-    text-align: left!important;
+    font-family: $header-font;
+    font-size: 22px !important;
+    font-weight: 400 !important;
+    line-height: 40px !important;
+    letter-spacing: 0em !important;
+    text-align: left !important;
   }
 
   .download-text {
     font-family: Work Sans;
-    font-size: 16px!important;
-    font-weight: 400!important;
-    line-height: 18px!important;
-    letter-spacing: 0em!important;
-    text-align: left!important;    
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 18px !important;
+    letter-spacing: 0em !important;
+    text-align: left !important;
   }
 
-  .web-box, .mobile-box {
-    padding: 0 0 0 0!important;
+  .web-box,
+  .mobile-box {
+    padding: 0 0 0 0 !important;
   }
 
   .download .btn-download-black {
@@ -782,97 +801,99 @@
   }
 
   .countdown {
-    width: 750px!important;
-    padding: 4em!important;
+    width: 750px !important;
+    padding: 4em !important;
   }
 
   .countdown-heading {
-    margin: 1em 0!important;
-    font-family: Fredoka;
-    font-size: 25px!important;
-    font-weight: 400!important;
-    line-height: 30px!important;
-    letter-spacing: 0em!important;
-    text-align: left!important;
+    margin: 1em 0 !important;
+    font-family: $header-font;
+    font-size: 25px !important;
+    font-weight: 400 !important;
+    line-height: 30px !important;
+    letter-spacing: 0em !important;
+    text-align: left !important;
   }
 
   .countdown-number {
-    font-family: Fredoka;
-    font-size: 40px!important;
-    font-weight: 400!important;
-    line-height: 35px!important;
-    letter-spacing: 0em!important;
-    text-align: center!important;
+    font-family: $header-font;
+    font-size: 40px !important;
+    font-weight: 400 !important;
+    line-height: 35px !important;
+    letter-spacing: 0em !important;
+    text-align: center !important;
   }
 
   .countdown-text {
-    font-family: Work Sans!important;
-    font-size: 14px!important;
-    font-weight: 400!important;
-    line-height: 16px!important;
-    letter-spacing: 0em!important;
-    text-align: center!important;
-    color: #52345A!important;  
-    margin: 1.5em 0!important;  
+    font-family: Work Sans !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 16px !important;
+    letter-spacing: 0em !important;
+    text-align: center !important;
+    color: #52345a !important;
+    margin: 1.5em 0 !important;
   }
 
   .count-box {
-    margin: 1em 0!important;
+    margin: 1em 0 !important;
   }
 
   .community {
-    padding: 15em 8em 5em!important;
+    padding: 15em 8em 5em !important;
   }
 
   .community-head {
-    font-size: 35px!important;
-    font-weight: 400!important;
-    line-height: 35px!important;
-    letter-spacing: 0em!important;
+    font-size: 35px !important;
+    font-weight: 400 !important;
+    line-height: 35px !important;
+    letter-spacing: 0em !important;
     text-align: left;
   }
 
   .community-text {
-    color: #000000!important;
+    color: #000000 !important;
   }
 }
-
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 776px) {
   .countdown {
-    width: 350px!important;
-    padding: 2em!important;
+    width: 350px !important;
+    padding: 2em !important;
   }
-  
+
   .community {
-    margin-top: 15em!important;
-    padding: 15em 2em 5em!important;
+    margin-top: 15em !important;
+    padding: 15em 2em 5em !important;
   }
 
   .download {
-    padding: 5em 1em 0em !important;
+    padding: 5em 2em 2em !important;
   }
 
-  .web-box, .mobile-box {
-    padding: 0 1em 0 1em!important;
+  .web-box,
+  .mobile-box {
+    padding: 0 1em 0 1em !important;
   }
 
   .welcome-header {
-    padding: 1em 0 1em 1em!important ;
+    padding: 0.5em 0 1em 0.5em !important ;
+  }
+
+  .coins {
+    padding: 5em 0;
   }
 
   .coin-carousel {
-    overflow-x: hidden!important;
+    overflow-x: hidden !important;
   }
 
   .coin-header {
-    font-family: Fredoka;
-    font-size: 35px!important;
-    font-weight: 400!important;
-    line-height: 35px!important;
-    letter-spacing: 0em!important;
+    font-family: $header-font;
+    font-size: 35px !important;
+    font-weight: 400 !important;
+    line-height: 35px !important;
+    letter-spacing: 0em !important;
   }
-
 }
-

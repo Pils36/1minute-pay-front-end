@@ -33,7 +33,7 @@ const Sidebar = ({isOpen, toggle}) => {
 
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about">
+          <SidebarLink to="/">
             Homepage
           </SidebarLink>
           <SidebarLink to="discover" onClick={showModal}>

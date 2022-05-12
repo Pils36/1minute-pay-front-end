@@ -8,6 +8,9 @@ import Apple from '../assets/apple.svg';
 import BoxEth from '../assets/ethereum-box.svg';
 import BoxAmazon from '../assets/amazon-box.svg';
 
+
+// not in use
+
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   console.log(isOpen);
