@@ -4,9 +4,9 @@ const Inview = ({ children }) => {
   const myRef = useRef();
   const callbackFunction = (entryPoint) => {
     if (entryPoint[0].isIntersecting) {
-      entryPoint[0].target.classList.remove("scroll-disabled");
+      entryPoint[0].target.classList.add("scroll-active");
     } else {
-      entryPoint[0].target.classList.add("scroll-disabled");
+      entryPoint[0].target.classList.remove("scroll-active");
     }
   };
 
@@ -20,7 +20,7 @@ const Inview = ({ children }) => {
     observer.observe(myRef.current);
   });
   return (
-    <div className="scroll-disabled" ref={myRef}>
+    <div className="scroll-active" ref={myRef}>
       {children}
     </div>
   );

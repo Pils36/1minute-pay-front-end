@@ -1,15 +1,16 @@
-import { Route, Routes } from 'react-router-dom';
-import './App.scss';
-import Home from './pages';
+import { Routes, Route, useNavigate } from "react-router-dom";
+import "./App.scss";
+import Home from "./pages";
 
 function App() {
+  let navigate = useNavigate();
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Home/>}    />
+        <Route path="/1minute-pay-front-end" element={navigate("/")} />
+        <Route path="/" element={<Home />} />
       </Routes>
-      
-      
+
       {/* <Header />
       <Coins />
       <CoinCarousel />

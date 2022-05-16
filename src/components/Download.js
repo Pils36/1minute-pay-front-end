@@ -14,7 +14,7 @@ function Download() {
         <div className="row">
           <div className="col-12 col-md-10 col-lg-8 m-auto">
             <div className="web">
-              <div className="row  ">
+              <div className="row">
                 <div className="col-12 col-md-6 web-box order-2 order-sm-2 order-md-1 order-lg-1 ">
                   <div className="download-icon">
                     <img src={webView} alt="" />

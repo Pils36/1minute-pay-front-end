@@ -651,13 +651,25 @@ html,
   padding: 0.5em 0 1em 3em;
 }
 
-.scroll-disabled {
+.scroll-active {
   transition: all ease 5s;
-  .scroll-header,
+  .scroll-header {
+    color: #bc9cc3 !important;
+    font-weight: 500;
+  }
   .scroll-lead {
-    color: #52345a !important;
+    color: #d0b3d8 !important;
+    font-weight: 500;
   }
 }
+
+// .scroll-disabled {
+//   transition: all ease 5s;
+//   .scroll-header,
+//   .scroll-lead {
+//     color: #52345a !important;
+//   }
+// }
 
 .scroll-box {
   margin-bottom: 6em;
@@ -669,7 +681,8 @@ html,
     line-height: 40px;
     letter-spacing: 0em;
     text-align: left;
-    color: #bc9cc3;
+    // color: #bc9cc3;
+    color: #52345a;
     margin-bottom: 0.5em;
   }
 
@@ -680,7 +693,8 @@ html,
     line-height: 16px;
     letter-spacing: 0em;
     text-align: left;
-    color: #d0b3d8;
+    // color: #d0b3d8;
+    color: #52345a;
   }
 
   .scroll-active {
