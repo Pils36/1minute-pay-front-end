@@ -16,8 +16,32 @@ import Infinite from "../assets/infinity.svg";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import Inview from "./Inview";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function CoinCarousel() {
+  // const myRef = useRef();
+  // const q = gsap.utils.toArray(".scroll-box");
+
+  // useLayoutEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+
+  //   q.forEach((element) => {
+  //     gsap.to(element, {
+  //       scrollTrigger: {
+  //         trigger: element,
+  //         start: "top top+=100",
+  //         scrub: true,
+  //         end: "bottom top",
+  //         // end: "+=500",
+  //         toggleClass: "scroll-active",
+  //         // markers: true,
+  //       },
+  //       duration: 3,
+  //       stagger: 0.5,
+  //     });
+  //   });
+  // });
   return (
     <section className="coin-carousel">
       {/* <div className="container"> */}
@@ -169,7 +193,7 @@ function CoinCarousel() {
             <div className="container">
               <div className="slider desktop">
                 <Inview>
-                  <div className="scroll-box ">
+                  <div className="scroll-box">
                     <div className="scroll-header">
                       Crypto Buy <br /> and Sale
                     </div>
@@ -196,7 +220,7 @@ function CoinCarousel() {
 
                 <Inview>
                   <div className="scroll-box ">
-                    <div className="scroll-header ">
+                    <div className="scroll-header">
                       Bill payments <br /> simplified
                     </div>
                     <div className="scroll-lead ">

@@ -20,9 +20,9 @@ const Home = () => {
           <Navbar toggle={toggle} />
         </>
       </Header>
-      <Coins/>
-      <Download/>
-      <Footer/>
+      <Coins />
+      <Download />
+      <Footer />
     </>
   );
 };
