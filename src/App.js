@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/1minute-pay-front-end" element={navigate("/")} />
         <Route path="/" element={<Home />} />
       </Routes>
 

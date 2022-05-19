@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "swiper/css";
 // Import Swiper styles
 import "swiper/css";
@@ -15,36 +15,59 @@ import Litecoin from "../assets/lite-coin.svg";
 import Infinite from "../assets/infinity.svg";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+// import ScrollAnimation from "react-animate-on-scroll";
+import "animate.css/animate.min.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Inview from "./Inview";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function CoinCarousel() {
-  // const myRef = useRef();
-  // const q = gsap.utils.toArray(".scroll-box");
+  const myRef = useRef();
+  const card1Ref = useRef();
+  const card2Ref = useRef();
+  const card3Ref = useRef();
+  const card4Ref = useRef();
 
-  // useLayoutEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
 
-  //   q.forEach((element) => {
-  //     gsap.to(element, {
-  //       scrollTrigger: {
-  //         trigger: element,
-  //         start: "top top+=100",
-  //         scrub: true,
-  //         end: "bottom top",
-  //         // end: "+=500",
-  //         toggleClass: "scroll-active",
-  //         // markers: true,
-  //       },
-  //       duration: 3,
-  //       stagger: 0.5,
-  //     });
-  //   });
-  // });
+    if (position > 1100 && position < 1850) {
+      myRef.current.style.position = "fixed";
+      myRef.current.style.top = "50%";
+
+      position > 1250 && position < 1550
+        ? card2Ref.current.classList.add("scroll-active")
+        : card2Ref.current.classList.remove("scroll-active");
+
+      position > 1550 && position < 1820
+        ? card3Ref.current.classList.add("scroll-active")
+        : card3Ref.current.classList.remove("scroll-active");
+
+      position > 1820
+        ? card4Ref.current.classList.add("scroll-active")
+        : card4Ref.current.classList.remove("scroll-active");
+    } else if (position > 1850) {
+      myRef.current.style.position = "absolute";
+      myRef.current.style.top = "75%";
+    } else {
+      myRef.current.style.position = "absolute";
+      myRef.current.style.top = 0;
+    }
+  };
+  useEffect(() => {
+    AOS.init();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [setScrollPosition]);
+
   return (
     <section className="coin-carousel">
-      {/* <div className="container"> */}
       <div className="row">
         <div className="col-12 d-none d-sm-none d-md-block d-lg-block">
           <div className="d-flex justify-content-center align-items-center">
@@ -105,7 +128,7 @@ function CoinCarousel() {
         </div>
       </div>
 
-      <div className="row">
+      <div className="row ">
         <div className="container">
           <div className="col-12 col-sm-12 col-md-10 col-lg-8 m-auto">
             <div className="container">
@@ -191,9 +214,19 @@ function CoinCarousel() {
         <div className="container">
           <div className="col-12 col-sm-12 col-md-10 col-lg-8 m-auto">
             <div className="container">
-              <div className="slider desktop">
-                <Inview>
-                  <div className="scroll-box">
+              <div className="timeline-wrapper">
+                <div className="timeline">
+                  <div ref={myRef} className="scroll-bar"></div>
+                </div>
+
+                <div className="slider desktop">
+                  <div
+                    ref={card1Ref}
+                    data-aos="fade-in"
+                    data-aos-easing="linear"
+                    data-aos-duration="1000"
+                    className="scroll-box scroll-active"
+                  >
                     <div className="scroll-header">
                       Crypto Buy <br /> and Sale
                     </div>
@@ -203,10 +236,14 @@ function CoinCarousel() {
                       <br /> and many others.
                     </div>
                   </div>
-                </Inview>
 
-                <Inview>
-                  <div className="scroll-box ">
+                  <div
+                    ref={card2Ref}
+                    data-aos-easing="linear"
+                    data-aos-duration="1000"
+                    data-aos="fade-in"
+                    className="scroll-box "
+                  >
                     <div className="scroll-header ">
                       We buy gift cards <br /> at amazing value
                     </div>
@@ -216,10 +253,14 @@ function CoinCarousel() {
                       <br /> and many others.
                     </div>
                   </div>
-                </Inview>
 
-                <Inview>
-                  <div className="scroll-box ">
+                  <div
+                    ref={card3Ref}
+                    data-aos-easing="linear"
+                    data-aos-duration="1000"
+                    data-aos="fade-in"
+                    className="scroll-box "
+                  >
                     <div className="scroll-header">
                       Bill payments <br /> simplified
                     </div>
@@ -229,10 +270,14 @@ function CoinCarousel() {
                       <br /> and many others.
                     </div>
                   </div>
-                </Inview>
 
-                <Inview>
-                  <div className="scroll-box ">
+                  <div
+                    ref={card4Ref}
+                    data-aos-easing="linear"
+                    data-aos-duration="1000"
+                    data-aos="fade-in"
+                    className="scroll-box "
+                  >
                     <div className="scroll-header ">
                       Transaction <br /> tracking at it’s best
                     </div>
@@ -242,13 +287,12 @@ function CoinCarousel() {
                       <br /> and many others.
                     </div>
                   </div>
-                </Inview>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* </div> */}
     </section>
   );
 }

@@ -1,5 +1,7 @@
 import React, { useRef, useEffect } from "react";
 
+// not in use
+
 const Inview = ({ children }) => {
   const myRef = useRef();
   const callbackFunction = (entryPoint) => {

@@ -11,6 +11,10 @@ $header-font: "Fredoka", sans-serif;
 $body-text-font: "Work Sans", sans-serif;
 $font-stack-three: "Roboto", sans-serif;
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 html,
 ::after,
@@ -48,7 +52,7 @@ html,
   height: 100%;
   width: 100%;
   z-index: -1;
-  object-fit: cover;
+  object-fit: unset;
 }
 
 .navbar {
@@ -483,7 +487,7 @@ html,
   text-align: left;
   color: #bc9cc3;
   margin: 3em 0 2em;
-  padding-left: 4em;
+  padding-left: 9em;
 }
 
 .coin-carousel {
@@ -646,13 +650,36 @@ html,
   }
 }
 
-.desktop {
-  border-left: 0.7px solid #472a4f;
-  padding: 0.5em 0 1em 3em;
+.desktop-timeline {
+  touch-action: pan-y ;
+  cursor: grab ;
+  user-select: none ;
+}
+
+.timeline-wrapper {
+  display: flex;
+  gap: 0 90px;
+
+  .timeline {
+    width: 1px;
+    height: 1100px;
+    background-color: #472a4f;
+    position: relative;
+
+    .scroll-bar {
+      position: absolute;
+      width: 1px;
+      height: 120px;
+      background-color: #fff;
+      // top: 0;
+      touch-action: pan-y;
+      transform: translate(0, 0);
+    }
+  }
 }
 
 .scroll-active {
-  transition: all ease 5s;
+  // transition: all ease 5s;
   .scroll-header {
     color: #bc9cc3 !important;
     font-weight: 500;
@@ -663,16 +690,9 @@ html,
   }
 }
 
-// .scroll-disabled {
-//   transition: all ease 5s;
-//   .scroll-header,
-//   .scroll-lead {
-//     color: #52345a !important;
-//   }
-// }
-
 .scroll-box {
-  margin-bottom: 6em;
+  margin-bottom: 114px;
+  touch-action: pan-y;
 
   .scroll-header {
     font-family: $header-font;
