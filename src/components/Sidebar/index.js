@@ -6,6 +6,7 @@ import {
   SidebarMenu,
   SidebarLink,
   SideBtnWrap,
+  SidebarRoute
  } from './SidebarElements';
  import CloseBtn from '../../assets/menu-close.svg';
  import Logo from '../../assets/logo.svg';
@@ -23,6 +24,7 @@ const Sidebar = ({isOpen, toggle}) => {
     console.log("about is clicked")
   }
 
+
   return (
     <SidebarContainer isOpen={isOpen} >
       {about && <About showModal={showModal} /> }
@@ -33,18 +35,18 @@ const Sidebar = ({isOpen, toggle}) => {
 
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="/">
+          <SidebarLink onClick={toggle} to="/">
             Homepage
           </SidebarLink>
           <SidebarLink to="discover" onClick={showModal}>
             About Us
           </SidebarLink>
-          <SidebarLink to="services" >
+          <SidebarRoute onClick={toggle} to="services" >
             Sign-In
-          </SidebarLink>
-          <SidebarLink to="contact">
+          </SidebarRoute>
+          <SidebarRoute onClick={toggle} to="contact">
             Sign-Up
-          </SidebarLink>
+          </SidebarRoute>
         </SidebarMenu>
 
         <SideBtnWrap>
