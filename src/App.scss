@@ -52,7 +52,7 @@ html,
   height: 100%;
   width: 100%;
   z-index: -1;
-  object-fit: unset;
+  object-fit: fill;
 }
 
 .navbar {
@@ -454,28 +454,25 @@ html,
   }
 }
 
-.crypto {
-  font-family: $body-text-font;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0em;
-  text-align: left;
-  border: 1px solid #52345a;
-  box-sizing: border-box;
-  border-radius: 19.5px;
-  padding: 0.5em 1em;
-}
-
-.giftcards {
+.gc-tab-menu {
   color: #52345a;
   font-family: $body-text-font;
   font-size: 18px;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0em;
-  text-align: left;
-  margin: 0 1em;
+  text-align: center;
+  // margin: 0 1em;
+  cursor: pointer;
+  &:hover,
+  &.active {
+    color: #fff;
+    border: 1px solid #52345a;
+    padding: 0.5em 1em;
+    border-radius: 19.5px;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+  }
 }
 
 .company {
@@ -486,14 +483,14 @@ html,
   letter-spacing: 0em;
   text-align: left;
   color: #bc9cc3;
-  margin: 3em 0 2em;
+  margin: 3em 0 3em;
   padding-left: 9em;
 }
 
 .coin-carousel {
   color: #ffffff;
   background: #310e3a;
-  padding: 2em 0 0;
+  // padding: 2em 0 0;
   overflow-x: hidden !important;
 
   .img-small {
@@ -651,29 +648,34 @@ html,
 }
 
 .desktop-timeline {
-  touch-action: pan-y ;
-  cursor: grab ;
-  user-select: none ;
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
 }
 
 .timeline-wrapper {
   display: flex;
   gap: 0 90px;
+  // height: 100vh;
 
   .timeline {
     width: 1px;
     height: 1100px;
     background-color: #472a4f;
     position: relative;
+    transition: all ease 2s;
 
     .scroll-bar {
       position: absolute;
+      // position: fixed;
+      // top: 50%;
       width: 1px;
-      height: 120px;
+      height: 80px;
       background-color: #fff;
-      // top: 0;
+      top: 0;
       touch-action: pan-y;
       transform: translate(0, 0);
+      transition: position ease-in-out 2s;
     }
   }
 }
@@ -715,9 +717,6 @@ html,
     text-align: left;
     // color: #d0b3d8;
     color: #52345a;
-  }
-
-  .scroll-active {
   }
 }
 
@@ -929,5 +928,9 @@ html,
     font-weight: 400 !important;
     line-height: 35px !important;
     letter-spacing: 0em !important;
+  }
+
+  .company {
+    padding-left: 0;
   }
 }
