@@ -6,18 +6,15 @@ import Line from "../assets/line.svg";
 import Andriod from "../assets/andriod.svg";
 import Apple from "../assets/apple.svg";
 import Video from "../assets/bg-video.mp4";
-import Poster from "../assets/bg.svg";
+import Poster from "../assets/loader.gif";
 
 function Header(props) {
   return (
     <div className="header">
+      {props.children}
       <video muted autoPlay loop poster={Poster} className="bg-header">
         <source src={Video} type="video/mp4" />
       </video>
-      {props.children}
-      {/* <Router>
-        <Home />
-      </Router> */}
       <main className="container">
         <div className="main">
           <div className="row">

@@ -1,21 +1,12 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import "swiper/css";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/scrollbar";
 // import required modules
 import { Scrollbar } from "swiper";
-import Binance from "../assets/binance.svg";
-import Tether from "../assets/tether.svg";
-import Tron from "../assets/tron.svg";
-import Bitcoin from "../assets/bitcoin.svg";
-import Ethereum from "../assets/ethereum.svg";
-import Polygon from "../assets/polygon.svg";
-import Litecoin from "../assets/lite-coin.svg";
-import Infinite from "../assets/infinity.svg";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-// import ScrollAnimation from "react-animate-on-scroll";
 import "animate.css/animate.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -29,8 +20,22 @@ function CoinCarousel() {
   const card3Ref = useRef();
   const card4Ref = useRef();
 
+  // const scrollHandler = _ => {
+  //   console.log(card4Ref.current.getBoundingClientRect());
+  //   if (window.innerWidth > 2000 ){
+  //     alert('good')
+  //   } else if (window.innerWidth > 1440 && window.innerWidth )
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener("scroll", scrollHandler, true);
+  //   return () => {
+  //     window.removeEventListener("scroll", scrollHandler, true);
+  //   };
+  // }, []);
+
   const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const position = window.pageYOffset;
     setScrollPosition(position);
 
@@ -38,15 +43,15 @@ function CoinCarousel() {
       myRef.current.style.position = "fixed";
       myRef.current.style.top = "50%";
 
-      position > 1250 && position < 1550
+      position > 1150 && position < 1450
         ? card2Ref.current.classList.add("scroll-active")
         : card2Ref.current.classList.remove("scroll-active");
 
-      position > 1550 && position < 1820
+      position > 1450 && position < 1750
         ? card3Ref.current.classList.add("scroll-active")
         : card3Ref.current.classList.remove("scroll-active");
 
-      position > 1820
+      position > 1750
         ? card4Ref.current.classList.add("scroll-active")
         : card4Ref.current.classList.remove("scroll-active");
     } else if (position > 1850) {
@@ -56,7 +61,8 @@ function CoinCarousel() {
       myRef.current.style.position = "absolute";
       myRef.current.style.top = 0;
     }
-  };
+  });
+
   useEffect(() => {
     AOS.init();
     window.addEventListener("scroll", handleScroll);
@@ -69,89 +75,18 @@ function CoinCarousel() {
   return (
     <section className="coin-carousel">
       <div className="row">
-        <div className="col-12 d-none d-sm-none d-md-block d-lg-block">
-          <div className="d-flex justify-content-center align-items-center">
-            <div className="mx-1">
-              <img src={Binance} className="img-small" alt="binance" />
-            </div>
-            <div className="mx-1">
-              <img src={Tether} className="img-small" alt="tether" />
-            </div>
-            <div className="mx-1">
-              <img src={Tron} className="img-small" alt="tron" />
-            </div>
-            <div className="mx-1">
-              <img src={Bitcoin} className="img-big" alt="bitcoin" />
-            </div>
-            <div className="mx-1">
-              <img src={Ethereum} className="img-small" alt="ethereum" />
-            </div>
-            <div className="mx-1">
-              <img src={Polygon} className="img-small" alt="polygon" />
-            </div>
-            <div className="mx-1">
-              <img src={Litecoin} className="img-small" alt="litecoin" />
-            </div>
-            <div className="mx-1">
-              <img src={Infinite} className="img-small" alt="infinity" />
-            </div>
-          </div>
-        </div>
-
-        <div className="col-12 d-block d-sm-block d-md-none d-lg-none">
-          <div className="d-flex justify-content-center align-items-center">
-            <div className="mx-1">
-              <img src={Binance} className="img-small-mobile" alt="binance" />
-            </div>
-            <div className="mx-1">
-              <img src={Tether} className="img-small-mobile" alt="tether" />
-            </div>
-            <div className="mx-1">
-              <img src={Tron} className="img-small-mobile" alt="tron" />
-            </div>
-            <div className="mx-1">
-              <img src={Bitcoin} className="img-big-mobile" alt="bitcoin" />
-            </div>
-            <div className="mx-1">
-              <img src={Ethereum} className="img-small-mobile" alt="ethereum" />
-            </div>
-            <div className="mx-1">
-              <img src={Polygon} className="img-small-mobile" alt="polygon" />
-            </div>
-            <div className="mx-1">
-              <img src={Litecoin} className="img-small-mobile" alt="litecoin" />
-            </div>
-            <div className="mx-1">
-              <img src={Infinite} className="img-small-mobile" alt="infinity" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="row ">
         <div className="container">
-          <div className="col-12 col-sm-12 col-md-10 col-lg-8 m-auto">
+          <div className="col-12 col-md-10 col-lg-8 m-auto">
             <div className="container">
-              <div className="d-flex align-items-center my-3">
-                <div className="crypto">Crypto</div>
-                <div className="giftcards">Gift-Cards</div>
+              <div className="company text-center text-md-start">
+                THIS IS WHY WE EXIST AS A COMPANY
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="row">
-        <div className="container">
-          <div className="col-12 col-md-10 col-lg-8 m-auto">
-            <div className="container">
-              <div className="company">THIS IS WHY WE EXIST AS A COMPANY</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="row d-block d-sm-block d-md-none d-lg-none">
+      <div className="row d-block  d-lg-none">
         <div className="slider mobile">
           <Swiper
             scrollbar={{
@@ -210,7 +145,7 @@ function CoinCarousel() {
         </div>
       </div>
 
-      <div className="row d-none d-sm-none d-md-block d-md-block desktop-timeline">
+      <div className="row d-none d-lg-block desktop-timeline">
         <div className="container">
           <div className="col-12 col-sm-12 col-md-10 col-lg-8 m-auto">
             <div className="container">
@@ -222,9 +157,9 @@ function CoinCarousel() {
                 <div className="slider desktop">
                   <div
                     ref={card1Ref}
-                    data-aos="fade-in"
                     data-aos-easing="linear"
                     data-aos-duration="1000"
+                    data-aos="fade-in"
                     className="scroll-box scroll-active"
                   >
                     <div className="scroll-header">
@@ -278,7 +213,7 @@ function CoinCarousel() {
                     data-aos="fade-in"
                     className="scroll-box "
                   >
-                    <div className="scroll-header ">
+                    <div className="scroll-header">
                       Transaction <br /> tracking at it’s best
                     </div>
                     <div className="scroll-lead ">
