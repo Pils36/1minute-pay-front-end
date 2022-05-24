@@ -14,49 +14,52 @@ import "aos/dist/aos.css";
 import Inview from "./Inview";
 
 function CoinCarousel() {
+  let [gg, setGg] = useState();
   const myRef = useRef();
   const card1Ref = useRef();
   const card2Ref = useRef();
   const card3Ref = useRef();
   const card4Ref = useRef();
 
-  // const scrollHandler = _ => {
-  //   console.log(card4Ref.current.getBoundingClientRect());
-  //   if (window.innerWidth > 2000 ){
-  //     alert('good')
-  //   } else if (window.innerWidth > 1440 && window.innerWidth )
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", scrollHandler, true);
-  //   return () => {
-  //     window.removeEventListener("scroll", scrollHandler, true);
-  //   };
-  // }, []);
-
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = useCallback(() => {
     const position = window.pageYOffset;
-    setScrollPosition(position);
+    console.log(
+      (card3Ref.current.getBoundingClientRect().top / window.innerHeight) * 100
+    );
 
     if (position > 1100 && position < 1850) {
       myRef.current.style.position = "fixed";
       myRef.current.style.top = "50%";
 
-      position > 1150 && position < 1450
+      (card2Ref.current.getBoundingClientRect().top / window.innerHeight) *
+        100 <
+        54 &&
+      (card2Ref.current.getBoundingClientRect().top / window.innerHeight) *
+        100 >
+        20
         ? card2Ref.current.classList.add("scroll-active")
         : card2Ref.current.classList.remove("scroll-active");
+          // card3Ref.current.classList.add("scroll-active");
 
-      position > 1450 && position < 1750
+      (card3Ref.current.getBoundingClientRect().top / window.innerHeight) *
+        100 <
+        56 &&
+      (card3Ref.current.getBoundingClientRect().top / window.innerHeight) *
+        100 >
+        30
         ? card3Ref.current.classList.add("scroll-active")
         : card3Ref.current.classList.remove("scroll-active");
 
-      position > 1750
+      (card4Ref.current.getBoundingClientRect().top / window.innerHeight) *
+        100 <
+      56
         ? card4Ref.current.classList.add("scroll-active")
         : card4Ref.current.classList.remove("scroll-active");
+
     } else if (position > 1850) {
       myRef.current.style.position = "absolute";
-      myRef.current.style.top = "75%";
+      myRef.current.style.top = "80%";
     } else {
       myRef.current.style.position = "absolute";
       myRef.current.style.top = 0;
@@ -157,9 +160,9 @@ function CoinCarousel() {
                 <div className="slider desktop">
                   <div
                     ref={card1Ref}
-                    data-aos-easing="linear"
-                    data-aos-duration="1000"
-                    data-aos="fade-in"
+                    // data-aos-easing="linear"
+                    // data-aos-duration="1000"
+                    // data-aos="fade-in"
                     className="scroll-box scroll-active"
                   >
                     <div className="scroll-header">
@@ -174,9 +177,9 @@ function CoinCarousel() {
 
                   <div
                     ref={card2Ref}
-                    data-aos-easing="linear"
-                    data-aos-duration="1000"
-                    data-aos="fade-in"
+                    // data-aos-easing="linear"
+                    // data-aos-duration="1000"
+                    // data-aos="fade-in"
                     className="scroll-box "
                   >
                     <div className="scroll-header ">
@@ -191,9 +194,9 @@ function CoinCarousel() {
 
                   <div
                     ref={card3Ref}
-                    data-aos-easing="linear"
-                    data-aos-duration="1000"
-                    data-aos="fade-in"
+                    // data-aos-easing="linear"
+                    // data-aos-duration="1000"
+                    // data-aos="fade-in"
                     className="scroll-box "
                   >
                     <div className="scroll-header">
@@ -208,9 +211,9 @@ function CoinCarousel() {
 
                   <div
                     ref={card4Ref}
-                    data-aos-easing="linear"
-                    data-aos-duration="1000"
-                    data-aos="fade-in"
+                    // data-aos-easing="linear"
+                    // data-aos-duration="1000"
+                    // data-aos="fade-in"
                     className="scroll-box "
                   >
                     <div className="scroll-header">
