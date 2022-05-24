@@ -27,7 +27,7 @@ function Header(props) {
       {props.children}
       {loading && (
         <div className="loader-wrapper">
-          <Lottie options={defaultOptions} />
+          <Lottie options={defaultOptions} width={250} height={250} />
         </div>
       )}
 
