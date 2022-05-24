@@ -21,6 +21,10 @@ function CoinCarousel() {
   const handleScroll = useCallback(() => {
     const position = window.pageYOffset;
 
+    console.log(
+      (card3Ref.current.getBoundingClientRect().top / window.innerHeight) * 100
+    );
+
     if (position > 1100 && position < 1850) {
       myRef.current.style.position = "fixed";
       myRef.current.style.top = "50%";
@@ -36,7 +40,7 @@ function CoinCarousel() {
 
       (card3Ref.current.getBoundingClientRect().top / window.innerHeight) *
         100 <
-        56 &&
+        62 &&
       (card3Ref.current.getBoundingClientRect().top / window.innerHeight) *
         100 >
         30
@@ -45,7 +49,7 @@ function CoinCarousel() {
 
       (card4Ref.current.getBoundingClientRect().top / window.innerHeight) *
         100 <
-      56
+      62
         ? card4Ref.current.classList.add("scroll-active")
         : card4Ref.current.classList.remove("scroll-active");
     } else if (position > 1850) {
