@@ -20,9 +20,6 @@ function CoinCarousel() {
 
   const handleScroll = useCallback(() => {
     const position = window.pageYOffset;
-    console.log(
-      (card2Ref.current.getBoundingClientRect().top / window.innerHeight) * 100
-    );
 
     if (position > 1100 && position < 1850) {
       myRef.current.style.position = "fixed";
