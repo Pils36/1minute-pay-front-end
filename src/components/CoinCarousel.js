@@ -11,8 +11,6 @@ import "animate.css/animate.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Inview from "./Inview";
-
 function CoinCarousel() {
   const myRef = useRef();
   const card1Ref = useRef();
@@ -22,6 +20,10 @@ function CoinCarousel() {
 
   const handleScroll = useCallback(() => {
     const position = window.pageYOffset;
+
+    console.log(
+      (card3Ref.current.getBoundingClientRect().top / window.innerHeight) * 100
+    );
 
     if (position > 1100 && position < 1850) {
       myRef.current.style.position = "fixed";
@@ -38,7 +40,7 @@ function CoinCarousel() {
 
       (card3Ref.current.getBoundingClientRect().top / window.innerHeight) *
         100 <
-        56 &&
+        62 &&
       (card3Ref.current.getBoundingClientRect().top / window.innerHeight) *
         100 >
         30
@@ -47,10 +49,9 @@ function CoinCarousel() {
 
       (card4Ref.current.getBoundingClientRect().top / window.innerHeight) *
         100 <
-      56
+      62
         ? card4Ref.current.classList.add("scroll-active")
         : card4Ref.current.classList.remove("scroll-active");
-
     } else if (position > 1850) {
       myRef.current.style.position = "absolute";
       myRef.current.style.top = "80%";
