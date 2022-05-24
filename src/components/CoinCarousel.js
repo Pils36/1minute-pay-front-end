@@ -11,17 +11,13 @@ import "animate.css/animate.min.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import Inview from "./Inview";
-
 function CoinCarousel() {
-  // let [gg, setGg] = useState();
   const myRef = useRef();
   const card1Ref = useRef();
   const card2Ref = useRef();
   const card3Ref = useRef();
   const card4Ref = useRef();
 
-  // const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = useCallback(() => {
     const position = window.pageYOffset;
     console.log(
