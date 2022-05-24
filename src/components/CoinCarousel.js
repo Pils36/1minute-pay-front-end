@@ -14,19 +14,14 @@ import "aos/dist/aos.css";
 import Inview from "./Inview";
 
 function CoinCarousel() {
-  let [gg, setGg] = useState();
   const myRef = useRef();
   const card1Ref = useRef();
   const card2Ref = useRef();
   const card3Ref = useRef();
   const card4Ref = useRef();
 
-  const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = useCallback(() => {
     const position = window.pageYOffset;
-    console.log(
-      (card3Ref.current.getBoundingClientRect().top / window.innerHeight) * 100
-    );
 
     if (position > 1100 && position < 1850) {
       myRef.current.style.position = "fixed";
@@ -37,10 +32,9 @@ function CoinCarousel() {
         54 &&
       (card2Ref.current.getBoundingClientRect().top / window.innerHeight) *
         100 >
-        20
+        31.7
         ? card2Ref.current.classList.add("scroll-active")
         : card2Ref.current.classList.remove("scroll-active");
-          // card3Ref.current.classList.add("scroll-active");
 
       (card3Ref.current.getBoundingClientRect().top / window.innerHeight) *
         100 <
@@ -73,7 +67,7 @@ function CoinCarousel() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [setScrollPosition]);
+  });
 
   return (
     <section className="coin-carousel">
