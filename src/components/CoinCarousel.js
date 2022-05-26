@@ -17,45 +17,35 @@ function CoinCarousel() {
   const card2Ref = useRef();
   const card3Ref = useRef();
   const card4Ref = useRef();
+  const timelineRef = useRef();
 
   const handleScroll = useCallback(() => {
-    const position = window.pageYOffset;
 
-    console.log(
-      (card3Ref.current.getBoundingClientRect().top / window.innerHeight) * 100
-    );
+    (card2Ref.current.getBoundingClientRect().top / window.innerHeight) * 100 <
+    54.6
+      ? card2Ref.current.classList.add("scroll-active")
+      : card2Ref.current.classList.remove("scroll-active");
 
-    if (position > 1100 && position < 1850) {
-      myRef.current.style.position = "fixed";
-      myRef.current.style.top = "50%";
+    (card3Ref.current.getBoundingClientRect().top / window.innerHeight) * 100 <
+    54.6
+      ? card3Ref.current.classList.add("scroll-active")
+      : card3Ref.current.classList.remove("scroll-active");
 
-      (card2Ref.current.getBoundingClientRect().top / window.innerHeight) *
-        100 <
-        54 &&
-      (card2Ref.current.getBoundingClientRect().top / window.innerHeight) *
-        100 >
-        31.7
-        ? card2Ref.current.classList.add("scroll-active")
-        : card2Ref.current.classList.remove("scroll-active");
+    (card4Ref.current.getBoundingClientRect().top / window.innerHeight) * 100 <
+    54.6
+      ? card4Ref.current.classList.add("scroll-active")
+      : card4Ref.current.classList.remove("scroll-active");
 
-      (card3Ref.current.getBoundingClientRect().top / window.innerHeight) *
-        100 <
-        62 &&
-      (card3Ref.current.getBoundingClientRect().top / window.innerHeight) *
-        100 >
-        30
-        ? card3Ref.current.classList.add("scroll-active")
-        : card3Ref.current.classList.remove("scroll-active");
 
-      (card4Ref.current.getBoundingClientRect().top / window.innerHeight) *
-        100 <
-      62
-        ? card4Ref.current.classList.add("scroll-active")
-        : card4Ref.current.classList.remove("scroll-active");
-    } else if (position > 1850) {
+    if(  timelineRef.current.getBoundingClientRect().top / window.innerHeight * 100 < 50 &&
+      timelineRef.current.getBoundingClientRect().top / window.innerHeight * 100 > -56 ){
+      myRef.current.style.position = "fixed"
+      myRef.current.style.top = "50%" }
+
+    else if (timelineRef.current.getBoundingClientRect().top / window.innerHeight * 100 < -56){
       myRef.current.style.position = "absolute";
-      myRef.current.style.top = "80%";
-    } else {
+      myRef.current.style.top = "75%";
+    } else{
       myRef.current.style.position = "absolute";
       myRef.current.style.top = 0;
     }
@@ -148,7 +138,7 @@ function CoinCarousel() {
           <div className="col-12 col-sm-12 col-md-10 col-lg-8 m-auto">
             <div className="container">
               <div className="timeline-wrapper">
-                <div className="timeline">
+                <div ref={timelineRef} className="timeline">
                   <div ref={myRef} className="scroll-bar"></div>
                 </div>
 
@@ -157,7 +147,7 @@ function CoinCarousel() {
                     ref={card1Ref}
                     // data-aos-easing="linear"
                     // data-aos-duration="1000"
-                    // data-aos="fade-in"
+                    data-aos="fade-in"
                     className="scroll-box scroll-active"
                   >
                     <div className="scroll-header">
@@ -174,7 +164,7 @@ function CoinCarousel() {
                     ref={card2Ref}
                     // data-aos-easing="linear"
                     // data-aos-duration="1000"
-                    // data-aos="fade-in"
+                    data-aos="fade-in"
                     className="scroll-box "
                   >
                     <div className="scroll-header ">
@@ -191,7 +181,7 @@ function CoinCarousel() {
                     ref={card3Ref}
                     // data-aos-easing="linear"
                     // data-aos-duration="1000"
-                    // data-aos="fade-in"
+                    data-aos="fade-in"
                     className="scroll-box "
                   >
                     <div className="scroll-header">
@@ -208,7 +198,7 @@ function CoinCarousel() {
                     ref={card4Ref}
                     // data-aos-easing="linear"
                     // data-aos-duration="1000"
-                    // data-aos="fade-in"
+                    data-aos="fade-in"
                     className="scroll-box "
                   >
                     <div className="scroll-header">
