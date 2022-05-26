@@ -46,19 +46,18 @@ function Header(props) {
           <div className="row">
             <div className="col-12 col-sm-12 col-md-10 col-lg-8 m-auto">
               <div className="container">
-                <div className="main-header d-none d-md-block">
-                  Making Money in the Digital <br /> Space doesn’t have to be{" "}
-                  <br /> slow.
+                <div className="main-header">
+                  Making Money in the Digital Space doesn’t have to be slow.
                 </div>
 
-                <div className="main-header d-block d-md-none">
+                {/* <div className="main-header">
                   Making Money <br /> in the Digital <br /> Space doesn’t
                   <br /> have to be slow.
-                </div>
+                </div> */}
 
                 <div className="main-text">
-                  Get your transactions done and receive <br /> Payments in as
-                  quick as One Minute.
+                  Get your transactions done and receive Payments in as quick as
+                  One Minute.
                 </div>
               </div>
             </div>
@@ -67,38 +66,40 @@ function Header(props) {
       </main>
 
       <div className="condition d-none d-md-block position-relative">
-        <div className="custom-container">
-          <div className="header-bottom d-flex justify-content-between align-items-center ">
-            <div className="scroll">
-              <div className="d-flex justify-content-center justify-content-md-start align-items-center">
-                <div className="arrow d-flex justify-content-start align-items-center">
-                  <img src={Arrow} alt="" />
-                  <div className="scroll-text mx-3">Scroll to move along</div>
+        <div className="container">
+          <div className="custom-container">
+            <div className="d-flex justify-content-between align-items-center ">
+              <div className="scroll">
+                <div className="d-flex justify-content-center justify-content-md-start align-items-center">
+                  <div className="arrow d-flex justify-content-start align-items-center">
+                    <img src={Arrow} alt="" />
+                    <div className="scroll-text mx-3">Scroll to move along</div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="crypto-card">
-              <div className="cryptobox d-flex justify-content-end">
-                <div className="box-purple">
-                  <div className="box-img d-flex justify-content-end">
-                    <img src={BoxEth} alt="" />
-                  </div>
-                  <div className="box-text">
-                    <div className="head-text">Trade Crypto</div>
-                    <div className="body-text-purple">
-                      Sell your coins for quick cash
+              <div className="crypto-card">
+                <div className="cryptobox d-flex justify-content-end">
+                  <div className="box-purple">
+                    <div className="box-img d-flex justify-content-end">
+                      <img src={BoxEth} alt="" />
+                    </div>
+                    <div className="box-text">
+                      <div className="head-text">Trade Crypto</div>
+                      <div className="body-text-purple">
+                        Sell your coins for quick cash
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="box-grey">
-                  <div className="box-img d-flex justify-content-end">
-                    <img src={BoxAmazon} alt="" />
-                  </div>
-                  <div className="box-text">
-                    <div className="head-text">Trade Gift Cards</div>
-                    <div className="body-text-grey">
-                      View our array of Options
+                  <div className="box-grey">
+                    <div className="box-img d-flex justify-content-end">
+                      <img src={BoxAmazon} alt="" />
+                    </div>
+                    <div className="box-text">
+                      <div className="head-text">Trade Gift Cards</div>
+                      <div className="body-text-grey">
+                        View our array of Options
+                      </div>
                     </div>
                   </div>
                 </div>
