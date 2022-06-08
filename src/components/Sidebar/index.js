@@ -1,34 +1,33 @@
-import React, {useState} from 'react';
-import { 
-  SidebarContainer, 
-  Icon, 
+import React, { useState } from "react";
+import {
+  SidebarContainer,
+  Icon,
   SidebarWrapper,
   SidebarMenu,
   SidebarLink,
   SideBtnWrap,
-  SidebarRoute
- } from './SidebarElements';
- import CloseBtn from '../../assets/menu-close.svg';
- import Logo from '../../assets/logo.svg';
-import BoxEth from '../../assets/ethereum-box.svg';
-import BoxAmazon from '../../assets/amazon-box.svg';
-import About from './About';
+  SidebarRoute,
+} from "./SidebarElements";
+import CloseBtn from "../../assets/menu-close.svg";
+import Logo from "../../assets/logo.svg";
+import BoxEth from "../../assets/ethereum-box.svg";
+import BoxAmazon from "../../assets/amazon-box.svg";
+import About from "./About";
 
-const Sidebar = ({isOpen, toggle}) => {
+const Sidebar = ({ isOpen, toggle }) => {
   const [about, setAbout] = useState(false);
 
   const showModal = () => {
     // toggle()
-    setAbout(prev => !prev);
+    setAbout((prev) => !prev);
     // isOpen = !isOpen
-    console.log("about is clicked")
-  }
-
+    console.log("about is clicked");
+  };
 
   return (
-    <SidebarContainer isOpen={isOpen} >
-      {about && <About showModal={showModal} /> }
-      <Icon className='d-flex justify-content-between'>
+    <SidebarContainer isOpen={isOpen}>
+      {about && <About showModal={showModal} />}
+      <Icon className="d-flex justify-content-between">
         <img src={Logo} alt="logo" />
         <img src={CloseBtn} alt="close-btn" onClick={toggle} />
       </Icon>
@@ -41,7 +40,7 @@ const Sidebar = ({isOpen, toggle}) => {
           <SidebarLink to="discover" onClick={showModal}>
             About Us
           </SidebarLink>
-          <SidebarRoute onClick={toggle} to="services" >
+          <SidebarRoute onClick={toggle} to="services">
             Sign-In
           </SidebarRoute>
           <SidebarRoute onClick={toggle} to="contact">
@@ -50,11 +49,11 @@ const Sidebar = ({isOpen, toggle}) => {
         </SidebarMenu>
 
         <SideBtnWrap>
-        <div className="crypto-card">
+          <div className="crypto-card">
             <div className="cryptobox-mobile d-flex justify-content-end">
               <div className="box-purple-mobile">
                 <div className="box-img-mobile d-flex justify-content-start">
-                  <img src={BoxEth}  alt="" />
+                  <img src={BoxEth} alt="" />
                 </div>
                 <div className="box-text">
                   <div className="head-text-mobile">Trade Crypto</div>
@@ -62,10 +61,12 @@ const Sidebar = ({isOpen, toggle}) => {
               </div>
               <div className="box-grey-mobile">
                 <div className="box-img-mobile d-flex justify-content-end">
-                  <img src={BoxAmazon}  alt="" />
+                  <img src={BoxAmazon} alt="" />
                 </div>
                 <div className="box-text text-right">
-                  <div className="head-text-mobile-right ">Trade Gift Cards</div>
+                  <div className="head-text-mobile-right ">
+                    Trade Gift Cards
+                  </div>
                 </div>
               </div>
             </div>
@@ -73,7 +74,7 @@ const Sidebar = ({isOpen, toggle}) => {
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

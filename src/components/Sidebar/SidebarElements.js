@@ -33,7 +33,7 @@ export const Icon = styled.div`
   background: transparent;
   cursor: pointer;
   outline: none;
-  padding: 2em;
+  padding: 1.7em 1.5em 0 1.75em;
 `;
 
 export const SidebarWrapper = styled.div`
