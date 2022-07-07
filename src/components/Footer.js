@@ -50,7 +50,7 @@ function Footer() {
                 <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Email</div>
                   <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
-                    Hello@1minutepay.com
+                    hello@1minpay.xyz
                   </div>
                 </div>
 
