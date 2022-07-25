@@ -8,9 +8,7 @@ function Footer() {
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-3 d-flex justify-content-center count-box">
-              <div className="countdown-heading">
-                Let the Numbers speak for Us.
-              </div>
+              <div className="countdown-heading">Let the Numbers speak for Us.</div>
             </div>
             <div className="col-12 col-lg-3 d-flex justify-content-center count-box">
               <div className="d-flex flex-column justify-content-center align-items-center">
@@ -41,45 +39,34 @@ function Footer() {
               <div className="community-head">Join Our Community</div>
 
               <div className="community-text">
-                Learn more about 1MinutePay, chat with the team, others in the
-                community, and have your say in shaping the future of the
-                Digital transactional space.
+                Learn more about 1MinutePay, chat with the team, others in the community, and have your say in shaping the future of the Digital
+                transactional space.
               </div>
 
               <div className="table">
                 <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Email</div>
-                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
-                    hello@1minpay.xyz
-                  </div>
+                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">hello@1minpay.xyz</div>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Twitter</div>
-                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
-                    @1minutepay
-                  </div>
+                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">@1minutepay</div>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Medium</div>
-                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
-                    @1minutepay
-                  </div>
+                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">@1minutepay</div>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Whatsapp</div>
-                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
-                    @1minutepay
-                  </div>
+                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">@1minutepay</div>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Facebook</div>
-                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
-                    @1minutepay
-                  </div>
+                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">@1minutepay</div>
                 </div>
               </div>
             </div>
@@ -89,8 +76,8 @@ function Footer() {
               </div>
 
               <div className="address">
-                23, Afolabi Close,
-                <br /> Opebi Road, Ikeja, Lagos <br /> © 1MinutePay - 2022
+                20 Adisa Akintoye Street,
+                <br /> Ketu, Lagos <br /> © 1MinutePay - 2022
               </div>
 
               <div className="d-flex justify-content-between align-items-center footer-border faq-border">
