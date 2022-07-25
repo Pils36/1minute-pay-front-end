@@ -90,7 +90,7 @@ function Footer() {
 
               <div className="copyright">
                 © Copyright 1MinutePay ltd. <br />
-                Authorised by CAC Nigeria - RC947663
+                Authorised by CAC Nigeria - RC1616401
               </div>
 
               <div className="signature">Made by O2-Digital</div>
