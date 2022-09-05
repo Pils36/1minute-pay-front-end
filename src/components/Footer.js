@@ -76,9 +76,12 @@ function Footer() {
               </div>
 
               <div className="address">
+                Lagos, Nigeria <br /> © 1MinutePay - 2022
+              </div>
+              {/* <div className="address">
                 20 Adisa Akintoye Street,
                 <br /> Ketu, Lagos <br /> © 1MinutePay - 2022
-              </div>
+              </div> */}
 
               <div className="d-flex justify-content-between align-items-center footer-border faq-border">
                 <div className="email-text">FAQs</div>

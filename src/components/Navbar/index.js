@@ -24,12 +24,15 @@ function Navbar({ toggle }) {
               <NavLink to="/about" activStyle>
                 About Us
               </NavLink>
-              <NavLink to="/about" activStyle>
+              <NavLink to="https://api.whatsapp.com/send?phone=2348138176064" activStyle>
+                WhatsApp
+              </NavLink>
+              {/* <NavLink to="/about" activStyle>
                 Sign-In
               </NavLink>
               <NavLink to="/about" activStyle>
                 Sign-up
-              </NavLink>
+              </NavLink> */}
 
               <div className="btn-download-purple d-flex justify-content-center align-items-center">
                 <div className="d-flex justify-content-center align-items-center mx-2">
