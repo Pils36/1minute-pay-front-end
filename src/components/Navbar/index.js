@@ -24,9 +24,9 @@ function Navbar({ toggle }) {
               <NavLink to="/about" activStyle>
                 About Us
               </NavLink>
-              <NavLink to="https://api.whatsapp.com/send?phone=2348138176064" activStyle>
+              <a href="https://api.whatsapp.com/send?phone=2348138176064" activStyle style={{ color: '#fff', textDecoration: 'none' }}>
                 WhatsApp
-              </NavLink>
+              </a>
               {/* <NavLink to="/about" activStyle>
                 Sign-In
               </NavLink>

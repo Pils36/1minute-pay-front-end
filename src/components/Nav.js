@@ -30,11 +30,14 @@ function Nav() {
               <a className="nav-link active mx-lg-2" aria-current="page" href="/about">ABOUT US</a>
             </li>
             <li className="nav-item">
+              <a className="nav-link active mx-lg-2" aria-current="page" href="https://api.whatsapp.com/send?phone=2348138176064">WHATSAPP</a>
+            </li>
+            {/* <li className="nav-item">
               <a className="nav-link active mx-lg-2" aria-current="page" href="/sign-in">SIGN-IN</a>
             </li>
             <li className="nav-item">
               <a className="nav-link active mx-lg-2" aria-current="page" href="/sign-up">SIGN-UP</a>
-            </li>
+            </li> */}
           </ul>
           <div className='d-none d-sm-none d-md-block d-lg-block'>
             <div className="btn-download-purple d-flex justify-content-center align-items-center mx-2 ">

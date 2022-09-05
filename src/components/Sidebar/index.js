@@ -24,6 +24,10 @@ const Sidebar = ({ isOpen, toggle }) => {
     console.log("about is clicked");
   };
 
+  const gotoWhatsapp = () => {
+    window.location.href = 'https://api.whatsapp.com/send?phone=2348138176064';
+  }
+
   return (
     <SidebarContainer isOpen={isOpen}>
       {about && <About showModal={showModal} />}
@@ -40,12 +44,15 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink to="discover" onClick={showModal}>
             About Us
           </SidebarLink>
-          <SidebarRoute onClick={toggle} to="services">
+          <SidebarRoute onClick={gotoWhatsapp} to=''>
+            WhatsApp
+          </SidebarRoute>
+          {/* <SidebarRoute onClick={toggle} to="services">
             Sign-In
           </SidebarRoute>
           <SidebarRoute onClick={toggle} to="contact">
             Sign-Up
-          </SidebarRoute>
+          </SidebarRoute> */}
         </SidebarMenu>
 
         <SideBtnWrap>
