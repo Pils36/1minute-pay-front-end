@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage": "/",
+  "homepage": "https://www.1minutepay.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
