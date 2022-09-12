@@ -11,7 +11,7 @@ import Lottie from "react-lottie";
 import lottieLoader from "../assets/lottie/loader.json";
 
 function Header(props) {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const defaultOptions = {
     loop: true,
