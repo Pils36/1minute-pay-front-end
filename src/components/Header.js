@@ -11,7 +11,7 @@ import Lottie from "react-lottie";
 import lottieLoader from "../assets/lottie/loader.json";
 
 function Header(props) {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const defaultOptions = {
     loop: true,
@@ -39,7 +39,7 @@ function Header(props) {
         loop
         className="bg-header"
       >
-        <source src={Video} type="video/mp4" />
+        <source src='https://res.cloudinary.com/oneminutepay/video/upload/v1663001079/oneminutepay/assets/website/bg-video_b9eetw.mp4' type="video/mp4" />
       </video>
       <main className="container">
         <div className="main">
