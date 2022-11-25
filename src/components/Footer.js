@@ -46,27 +46,22 @@ function Footer() {
               <div className="table">
                 <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Email</div>
-                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">hello@1minpay.xyz</div>
+                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">support@1minutepay.com</div>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Twitter</div>
-                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">@1minutepay</div>
+                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">https://twitter.com/1minutepay</div>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
-                  <div className="email">Medium</div>
-                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">@1minutepay</div>
-                </div>
-
-                <div className="d-flex justify-content-between align-items-center footer-border">
-                  <div className="email">Whatsapp</div>
-                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">@1minutepay</div>
+                  <div className="email">Instagram</div>
+                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">https://instagram.com/1minutepay_app</div>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Facebook</div>
-                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">@1minutepay</div>
+                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">https://m.facebook.com/1minutepay</div>
                 </div>
               </div>
             </div>
@@ -88,7 +83,11 @@ function Footer() {
               </div>
 
               <div className="d-flex justify-content-between align-items-center footer-border">
-                <div className="email-text">Terms and Conditions</div>
+                <div className="email-text">
+                  <a href="https://app.termly.io/document/terms-of-use-for-online-marketplace/bf97b7c8-28d3-4143-a4d4-ea3be3d63942" style={{ color: 'white', textDecoration: 'none' }}>
+                    Terms and Conditions
+                    </a>
+                </div>
               </div>
 
               <div className="copyright">
