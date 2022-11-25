@@ -46,22 +46,39 @@ function Footer() {
               <div className="table">
                 <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Email</div>
-                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">support@1minutepay.com</div>
+                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
+                    <a href="mailto:support@1minutepay.com" style={{ color: 'white', textDecoration: 'none' }}>
+                      support@1minutepay.com
+                    </a>
+                  
+                  </div>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Twitter</div>
-                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">https://twitter.com/1minutepay</div>
+                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
+                    <a href="https://twitter.com/1minutepay" style={{ color: 'white', textDecoration: 'none' }}>
+                      https://twitter.com/1minutepay
+                    </a>
+                  </div>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Instagram</div>
-                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">https://instagram.com/1minutepay_app</div>
+                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
+                    <a href="https://instagram.com/1minutepay_app" style={{ color: 'white', textDecoration: 'none' }}>
+                      https://instagram.com/1minutepay_app
+                    </a>
+                  </div>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">Facebook</div>
-                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">https://m.facebook.com/1minutepay</div>
+                  <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
+                    <a href="https://m.facebook.com/1minutepay" style={{ color: 'white', textDecoration: 'none' }}>
+                      https://m.facebook.com/1minutepay
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
