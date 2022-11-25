@@ -44,10 +44,10 @@ function Nav() {
               <div className='d-flex justify-content-center align-items-center mx-2'>
                 <div className='ps-2'>DOWNLOAD THE APP </div>
                 <img src={Line} alt="" className='px-2' />
-                <a href="https://play.google.com/store/apps/details?id=com.oneminutepay">
+                <a href="https://onelink.to/q5au2z">
                   <img src={Andriod} alt="" className='mx-2'/>
                 </a>
-                <a href="https://apps.apple.com/us/app/1minutepay-com/id1637654016">
+                <a href="https://onelink.to/q5au2z">
                   <img src={Apple} alt="" className='mx-2' />
                 </a>
               </div>
