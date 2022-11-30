@@ -45,7 +45,9 @@ function Footer() {
 
               <div className="table">
                 <div className="d-flex justify-content-between align-items-center footer-border">
-                  <div className="email">Email</div>
+                  <div className="email">
+                    <a href="mailto:support@1minutepay.com" style={{ color: 'white', textDecoration: 'none' }}>Email</a>
+                  </div>
                   <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
                     <a href="mailto:support@1minutepay.com" style={{ color: 'white', textDecoration: 'none' }}>
                       support@1minutepay.com
@@ -55,7 +57,7 @@ function Footer() {
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
-                  <div className="email">Twitter</div>
+                  <div className="email"><a href="https://twitter.com/1minutepay" style={{ color: 'white', textDecoration: 'none' }}>Twitter</a></div>
                   <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
                     <a href="https://twitter.com/1minutepay" style={{ color: 'white', textDecoration: 'none' }}>
                       https://twitter.com/1minutepay
@@ -64,7 +66,7 @@ function Footer() {
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
-                  <div className="email">Instagram</div>
+                  <div className="email"><a href="https://instagram.com/1minutepay_app" style={{ color: 'white', textDecoration: 'none' }}>Instagram</a></div>
                   <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
                     <a href="https://instagram.com/1minutepay_app" style={{ color: 'white', textDecoration: 'none' }}>
                       https://instagram.com/1minutepay_app
@@ -73,7 +75,7 @@ function Footer() {
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
-                  <div className="email">Facebook</div>
+                  <div className="email"><a href="https://m.facebook.com/1minutepay" style={{ color: 'white', textDecoration: 'none' }}>Facebook</a></div>
                   <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
                     <a href="https://m.facebook.com/1minutepay" style={{ color: 'white', textDecoration: 'none' }}>
                       https://m.facebook.com/1minutepay
