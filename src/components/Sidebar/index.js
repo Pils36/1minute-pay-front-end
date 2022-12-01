@@ -25,8 +25,8 @@ const Sidebar = ({ isOpen, toggle }) => {
   };
 
   const gotoWhatsapp = () => {
-    window.location.href = 'https://api.whatsapp.com/send?phone=2348138176064';
-  }
+    window.location.href = "https://api.whatsapp.com/send?phone=2348138176064";
+  };
 
   return (
     <SidebarContainer isOpen={isOpen}>
@@ -44,7 +44,7 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink to="discover" onClick={showModal}>
             About Us
           </SidebarLink>
-          <SidebarRoute onClick={gotoWhatsapp} to=''>
+          <SidebarRoute onClick={gotoWhatsapp} to="">
             WhatsApp
           </SidebarRoute>
           {/* <SidebarRoute onClick={toggle} to="services">
