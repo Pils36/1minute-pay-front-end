@@ -36,11 +36,14 @@ const PasswordReset = () => {
   /** Validate password field on change */
   const handlePasswordChange = (evt) => {
     setPassword(evt.target.value);
+    confirmPassword.length && setConfirmPassword("");
     const { isValid, error } = validatePassword(evt.target.value);
     if (!isValid && error) {
+      setHasEnteredPassword(false);
       setPasswordError(error);
     } else {
       passwordError && setPasswordError(null);
+      setHasEnteredPassword(true);
     }
   };
 
@@ -69,19 +72,19 @@ const PasswordReset = () => {
     }
   };
 
-  const handlePasswordEntered = (evt) => {
-    evt.preventDefault();
-    if (!isLoading) {
-      const { isValid, error } = validatePassword(password);
+  // const handlePasswordEntered = (evt) => {
+  //   evt.preventDefault();
+  //   if (!isLoading) {
+  //     const { isValid, error } = validatePassword(password);
 
-      if (!isValid && error) {
-        setPasswordError(error);
-      } else {
-        passwordError && setPasswordError(null);
-        setHasEnteredPassword(true);
-      }
-    }
-  };
+  //     if (!isValid && error) {
+  //       setPasswordError(error);
+  //     } else {
+  //       passwordError && setPasswordError(null);
+  //       setHasEnteredPassword(true);
+  //     }
+  //   }
+  // };
 
   /** SUBMIT HANDLER
    * when the user clicks save new password button or presses enter in reenter field
@@ -154,18 +157,18 @@ const PasswordReset = () => {
 
               <div>
                 {error && <div className="error-text">{error}</div>}
-                <form onSubmit={handlePasswordEntered}>
-                  <PasswordInput
-                    placeholder="Create New Password"
-                    id="reset_new_password"
-                    value={password}
-                    onChange={handlePasswordChange}
-                    onFocus={() => passwordError && setPasswordError(null)}
-                    error={passwordError}
-                    onBlur={handlePasswordBlur}
-                    disabled={isLoading || hasEnteredPassword}
-                  />
-                </form>
+
+                <PasswordInput
+                  placeholder="Create New Password"
+                  id="reset_new_password"
+                  value={password}
+                  onChange={handlePasswordChange}
+                  onFocus={() => passwordError && setPasswordError(null)}
+                  error={passwordError}
+                  onBlur={handlePasswordBlur}
+                  disabled={isLoading}
+                />
+
                 <form onSubmit={handleReset}>
                   <PasswordInput
                     disabled={!hasEnteredPassword || isLoading}
