@@ -1,6 +1,7 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.scss";
 import Home from "./pages";
+import PasswordReset from "./pages/password-reset";
 
 function App() {
   let navigate = useNavigate();
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/password-reset" element={<PasswordReset />} />
       </Routes>
 
       {/* <Header />

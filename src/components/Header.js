@@ -41,7 +41,7 @@ function Header(props) {
       >
         <source src='https://res.cloudinary.com/oneminutepay/video/upload/v1663001079/oneminutepay/assets/website/bg-video_b9eetw.mp4' type="video/mp4" />
       </video>
-      <main className="container">
+      <main className="container" style={{ backgroundColor: 'transparent' }}>
         <div className="main">
           <div className="row">
             <div className="col-12 col-sm-12 col-md-10 col-lg-8 m-auto">
