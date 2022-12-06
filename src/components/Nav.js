@@ -41,7 +41,7 @@ function Nav() {
           </ul>
           <div className='d-none d-sm-none d-md-block d-lg-block'>
             <div className="btn-download-purple d-flex justify-content-center align-items-center mx-2 ">
-              <div className='d-flex justify-content-center align-items-center mx-2'>
+              <div className='d-flex justify-content-center align-items-center mx-2' onClick={() => window.location.href = "https://onelink.to/q5au2z"} style={{ cursor: "pointer" }}>
                 <div className='ps-2'>DOWNLOAD THE APP </div>
                 <img src={Line} alt="" className='px-2' />
                 <a href="https://onelink.to/q5au2z">

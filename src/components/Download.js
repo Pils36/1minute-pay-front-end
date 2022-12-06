@@ -48,7 +48,7 @@ function Download() {
                     anywhere.
                   </div>
                   <div className="btn-download-black d-flex justify-content-center align-items-center">
-                    <div className="d-flex justify-content-center align-items-center mx-2">
+                    <div className="d-flex justify-content-center align-items-center mx-2" onClick={() => window.location.href = "https://onelink.to/q5au2z"} style={{ cursor: "pointer" }}>
                       <div className="ps-2">DOWNLOAD THE APP </div>
                       <img src={WhiteLine} alt="" className="px-2" />
                       <a href="https://onelink.to/q5au2z">

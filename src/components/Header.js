@@ -112,7 +112,7 @@ function Header(props) {
       <div className="header-bottom-mobile d-block d-md-none">
         <div className="d-flex justify-content-center align-items-center my-5">
           <div className="btn-download-purple d-flex justify-content-center align-items-center mx-2">
-            <div className="d-flex justify-content-center align-items-center mx-2">
+            <div className="d-flex justify-content-center align-items-center mx-2" onClick={() => window.location.href = "https://onelink.to/q5au2z"} style={{ cursor: "pointer" }}>
               <div className="ps-2">DOWNLOAD THE APP </div>
               <img src={Line} alt="" className="px-2" />
               <a href="https://onelink.to/q5au2z">
