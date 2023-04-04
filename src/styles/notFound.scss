@@ -1,0 +1,123 @@
+.not-found-page-container {
+  background: #f1f2f5;
+  padding-top: 73px;
+
+  nav {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .not-found-content-container {
+    margin: 47.52px auto 185px;
+    width: 90%;
+    max-width: 587px;
+    text-align: center;
+    font-family: "Work Sans", sans-serif;
+
+    h1 {
+      margin: 40px 0 24px;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 60px;
+      color: #310e3a;
+      font-family: "Fredoka", sans-serif;
+    }
+
+    .not-found-subtitle {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: rgba(30, 30, 30, 0.8);
+    }
+
+    > a {
+      margin: 40px auto 80px;
+      max-width: 254px;
+      width: 100%;
+      height: 56px;
+      border: 1px solid #310e3a;
+      border-radius: 28px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 20px;
+      text-transform: uppercase;
+      color: #310e3a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .not-found-download-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      color: rgba(30, 30, 30, 0.8);
+      margin-bottom: 37px;
+    }
+
+    > div {
+      display: flex;
+      column-gap: 24px;
+      padding: 0 31.5px;
+
+      a {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 8px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: #ffffff;
+        height: 56px;
+        background: #310e3a;
+        border-radius: 32px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .not-found-page-container {
+    padding-top: 39px;
+
+    .not-found-content-container {
+      margin-bottom: 75px;
+      > svg {
+        max-width: 350px;
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 24px;
+        line-height: 60px;
+        margin: 32px 0 24px;
+      }
+
+      .not-found-subtitle,
+      .not-found-download-text {
+        font-size: 14px;
+        line-height: 150%;
+      }
+
+      > a {
+        text-transform: initial;
+        margin: 32px auto 40px;
+        max-width: 324px;
+      }
+
+      > div {
+        flex-direction: column;
+        row-gap: 24px;
+        padding: 0;
+
+        a {
+          flex: 0 0 auto;
+        }
+      }
+    }
+  }
+}

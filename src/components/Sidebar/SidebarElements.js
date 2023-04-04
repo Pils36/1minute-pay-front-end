@@ -15,6 +15,7 @@ export const SidebarContainer = styled.aside`
   top: 0;
   left: 0;
   transition: 0.3 ease-in-out;
+  ${(props) => !props.isOpen && `pointer-events: none;`}
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
 `;

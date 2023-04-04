@@ -44,6 +44,9 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink to="discover" onClick={showModal}>
             About Us
           </SidebarLink>
+          <SidebarLink to="/contact-us" onClick={toggle}>
+            Contact us
+          </SidebarLink>
           <SidebarRoute onClick={gotoWhatsapp} to="">
             WhatsApp
           </SidebarRoute>

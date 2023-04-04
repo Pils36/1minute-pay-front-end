@@ -3,23 +3,37 @@ import "./App.scss";
 import Home from "./pages";
 import PasswordReset from "./pages/password-reset";
 import EmailVerification from "./pages/email-verification";
+import NotFound from "./pages/not-found";
+import ContactUs from "./pages/contact-us";
+import Blog from "./pages/blog";
+import BlogItem from "./pages/blog-item";
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   let navigate = useNavigate();
-  return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/password-reset" element={<PasswordReset />} />
-        <Route path="/email-verification" element={<EmailVerification />} />
-      </Routes>
 
-      {/* <Header />
+  const helmetContext = {};
+  return (
+    <HelmetProvider context={helmetContext}>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/password-reset" element={<PasswordReset />} />
+          <Route path="/email-verification" element={<EmailVerification />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogItem />} />
+
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+
+        {/* <Header />
       <Coins />
       <CoinCarousel />
       <Download />
       <Footer /> */}
-    </div>
+      </div>
+    </HelmetProvider>
   );
 }
 

@@ -52,7 +52,7 @@ export const NavLink = styled(Link)`
 export const MenuBtn = styled.div`
   display: none;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: block;
     padding: 0 1em;
     cursor: pointer;
@@ -65,7 +65,7 @@ export const NavMenu = styled.div`
   gap: 0 31px;
   // margin-right: -24px;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     display: none;
   }
 `;

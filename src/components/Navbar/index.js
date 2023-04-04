@@ -5,6 +5,7 @@ import Line from "../../assets/line.svg";
 import Andriod from "../../assets/andriod.svg";
 import Apple from "../../assets/apple.svg";
 import OpenBtn from "../../assets/menu-open.svg";
+import { LogoIcon } from "../icons";
 
 function Navbar({ toggle }) {
   return (
@@ -13,7 +14,7 @@ function Navbar({ toggle }) {
         <div className="custom-container">
           <Nav>
             <NavLink to={"/"}>
-              <img src={Logo} alt="logo" />
+              <LogoIcon isWhite />
             </NavLink>
 
             <MenuBtn>
@@ -24,7 +25,11 @@ function Navbar({ toggle }) {
               <NavLink to="/about" activStyle>
                 About Us
               </NavLink>
-              <a href="https://api.whatsapp.com/send?phone=2348138176064" activStyle style={{ color: '#fff', textDecoration: 'none' }}>
+              <a
+                href="https://api.whatsapp.com/send?phone=2348138176064"
+                activStyle
+                style={{ color: "#fff", textDecoration: "none" }}
+              >
                 WhatsApp
               </a>
               {/* <NavLink to="/about" activStyle>
@@ -35,7 +40,13 @@ function Navbar({ toggle }) {
               </NavLink> */}
 
               <div className="btn-download-purple d-flex justify-content-center align-items-center">
-                <div className="d-flex justify-content-center align-items-center mx-2" onClick={() => window.location.href = "https://onelink.to/q5au2z"} style={{ cursor: "pointer" }}>
+                <div
+                  className="d-flex justify-content-center align-items-center mx-2"
+                  onClick={() =>
+                    (window.location.href = "https://onelink.to/q5au2z")
+                  }
+                  style={{ cursor: "pointer" }}
+                >
                   <div className="ps-2">DOWNLOAD THE APP </div>
                   <img src={Line} alt="" className="px-2" />
                   <a href="https://onelink.to/q5au2z">
