@@ -114,6 +114,21 @@ export const BlogItemContentContainer = styled.div`
       width: 100%;
       margin: 20px 0;
     }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin-top: 20px;
+      color: #310e3a;
+      font-family: "Fredoka", sans-serif;
+      font-weight: 500;
+
+      b {
+        font-weight: 500;
+      }
+    }
   }
 
   @media (max-width: 767px) {
@@ -141,7 +156,7 @@ export const BlogItemContentContainer = styled.div`
     }
 
     > img:nth-child(2) {
-      height: 217px;
+      /* height: 217px; */
       margin: 24px 0 39px;
     }
 
@@ -347,8 +362,8 @@ const BlogItem = () => {
           </div>
 
           <LazyLoadImage
-            alt="Blog title"
-            height={420}
+            alt={blog.fields.title}
+            // height={420}
             src={`https:${blog.fields.thumbnail.fields.file.url}`}
             width="100%"
           />
