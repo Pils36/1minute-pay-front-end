@@ -1,9 +1,7 @@
-import styled from "styled-components";
-import BlogPlaceholder from "../../assets/blog-placeholder.png";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import { RightCaretIcon } from "../icons";
-import { Link } from "react-router-dom";
 import moment from "moment";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { RightCaretIcon } from "../icons";
 
 export const BlogCardContainer = styled.div`
   font-family: "Work Sans", sans-serif;
@@ -176,8 +174,8 @@ export const BlogCard = ({ isRelated, blog }) => (
     catBg={blog.fields.category.fields.backgroundColor}
     catColor={blog.fields.category.fields.textColor}
   >
-    <LazyLoadImage
-      alt="Blog title"
+    <img
+      alt={blog.fields.title}
       height={300}
       src={`https:${blog.fields.thumbnail.fields.file.url}`}
       width="100%"

@@ -1,19 +1,16 @@
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { createClient } from "contentful";
+import moment from "moment";
 import { useEffect, useState } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Helmet } from "react-helmet-async";
+import Lottie from "react-lottie";
+import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
+import lottieLoader from "../assets/lottie/loader.json";
 import { BlogCard } from "../components/cards/BlogCard";
 import { StaticNavbar } from "../components/Navbar/StaticNavbar";
 import Sidebar from "../components/Sidebar";
-import { BlogCardFlexContainer, BlogPageContainer } from "./blog";
-import BlogPlaceholder from "../assets/blog-placeholder.png";
-import { ContactUsPageContainer } from "./contact-us";
-import lottieLoader from "../assets/lottie/loader.json";
-import Lottie from "react-lottie";
-import { createClient } from "contentful";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { useNavigate, useParams } from "react-router-dom";
-import moment from "moment";
-import { Helmet } from "react-helmet-async";
+import { BlogPageContainer } from "./blog";
 
 export const BlogItemPageContainer = styled(BlogPageContainer)`
   > h2 {
@@ -361,7 +358,7 @@ const BlogItem = () => {
             </div>
           </div>
 
-          <LazyLoadImage
+          <img
             alt={blog.fields.title}
             // height={420}
             src={`https:${blog.fields.thumbnail.fields.file.url}`}
@@ -372,7 +369,7 @@ const BlogItem = () => {
             {documentToReactComponents(blog.fields.content, {
               renderNode: {
                 "embedded-asset-block": (node) => (
-                  <LazyLoadImage
+                  <img
                     src={`https:${node.data.target.fields.file.url}`}
                     alt={blog.title}
                   />
