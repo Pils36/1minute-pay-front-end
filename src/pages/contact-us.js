@@ -348,7 +348,10 @@ const socialLinks = [
   { link: "https://m.facebook.com/1minutepay", icon: <FacebookIcon /> },
   { link: "https://instagram.com/1minutepay", icon: <InstagramIcon /> },
   { link: "https://twitter.com/1minutepay", icon: <TwitterIcon /> },
-  { link: "https://linkedin.com", icon: <LinkedinIcon /> },
+  {
+    link: "https://www.linkedin.com/company/1minutepay/",
+    icon: <LinkedinIcon />,
+  },
 ];
 
 const contactInfo = [
