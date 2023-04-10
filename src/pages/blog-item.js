@@ -369,7 +369,7 @@ const BlogItem = () => {
         />
 
         <meta property="og:site_name" content="1minuepay" />
-        {/* twitter card */}
+        twitter card
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="1minutepay" />
         <meta
