@@ -41,15 +41,14 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink onClick={toggle} to="/">
             Homepage
           </SidebarLink>
-          <SidebarLink to="discover" onClick={showModal}>
-            About Us
-          </SidebarLink>
+          <SidebarLink to="/about-us">About Us</SidebarLink>
           <SidebarLink to="/contact-us" onClick={toggle}>
             Contact us
           </SidebarLink>
-          <SidebarRoute onClick={gotoWhatsapp} to="">
-            WhatsApp
-          </SidebarRoute>
+          <SidebarLink to="/blog" onClick={toggle}>
+            Blog
+          </SidebarLink>
+
           {/* <SidebarRoute onClick={toggle} to="services">
             Sign-In
           </SidebarRoute>

@@ -17,6 +17,17 @@ import {
 } from "../components/icons/social";
 import { useState } from "react";
 import Sidebar from "../components/Sidebar";
+import { validateContactUs } from "../utils/validate/validateContactUs";
+import axios from "axios";
+import { BASE_URL } from "../lib/config";
+import { message as antdMessage } from "antd";
+import { ButtonLoader } from "../components/ButtonLoader";
+import { validateName } from "../utils/validate/validateName";
+import { validateEmail } from "../utils/validate/validateEmail";
+import { validatePhoneNumber } from "../utils/validate/validatePhoneNumber";
+import { validateText } from "../utils/validate/validateText";
+import { RE_DIGIT } from "../constants/RE_DIGIT";
+import { capitalizeText } from "../utils/validate/capitalizeText";
 
 export const ContactUsPageContainer = styled.div`
   background: #f1f2f5;
@@ -359,9 +370,138 @@ const contactInfo = [
 const ContactUs = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  /** FORM VALUES */
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [message, setMessage] = useState("");
+
+  /** LOADING STATE */
+  const [isLoading, setIsLoading] = useState(false);
+
+  /** ERROR STATES */
+  const [firstNameError, setFirstNameError] = useState(null);
+  const [lastNameError, setLastNameError] = useState(null);
+  const [emailError, setEmailError] = useState(null);
+  const [phoneNumberError, setPhoneNumberError] = useState(null);
+  const [messageError, setMessageError] = useState(null);
+  const [error, setError] = useState(null);
+
+  /** success state */
+  const [success, setSuccess] = useState(false);
+
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+  const handlePhoneNumberChange = (evt) => {
+    const val = evt.target.value.split(",").join("");
+
+    if (!RE_DIGIT.test(val) && val !== "") return;
+
+    setPhoneNumber(val);
+  };
+
+  /** INPUT BLUR HANDLERS
+   * i.e. when user leaves/removes focus on the input fields
+   */
+  const handleFirstNameBlur = () => {
+    const { isValid, error } = validateName(firstName.trim());
+    if (!isValid && error) setFirstNameError(error);
+  };
+
+  const handleLastNameBlur = () => {
+    const { isValid, error } = validateName(lastName.trim());
+    if (!isValid && error) setLastNameError(error);
+  };
+
+  const handleEmailBlur = () => {
+    const { isValid, error } = validateEmail(email.trim());
+    if (!isValid && error) setEmailError(error);
+  };
+
+  const handlePhoneNumberBlur = () => {
+    const { isValid, error } = validatePhoneNumber(phoneNumber.trim());
+    if (!isValid && error) setPhoneNumberError(error);
+  };
+
+  const handleMessageBlur = () => {
+    const { isValid, error } = validateText(message.trim());
+    if (!isValid && error) setMessageError(error);
+  };
+
+  const clearForm = () => {
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPhoneNumber("");
+    setMessage("");
+  };
+
+  /** SUBMIT HANDLER
+   * when the user clicks submit button or presses enter in any field
+   */
+  const handleSubmit = async (evt) => {
+    evt.preventDefault();
+
+    /** handle field validations */
+    if (!isLoading) {
+      const { isValid, error } = validateContactUs({
+        firstName: firstName.trim(),
+        lastName: lastName.trim(),
+        email: email.trim(),
+        phoneNumber: phoneNumber.trim(),
+        message: message.trim(),
+      });
+
+      if (!isValid) {
+        if (error?.firstName) setFirstNameError(error.firstName);
+        if (error?.lastName) setLastNameError(error.lastName);
+        if (error?.email) setEmailError(error.email);
+        if (error?.phoneNumber) setPhoneNumberError(error.phoneNumber);
+        if (error?.message) setMessageError(error.message);
+      } else {
+        try {
+          setIsLoading(true);
+
+          let body = {
+            firstName: capitalizeText(firstName.trim()),
+            lastName: capitalizeText(lastName.trim()),
+            email: email.trim().toLowerCase(),
+            phoneNumber: `234${phoneNumber.trim().slice(1)}`,
+            message: message.trim(),
+          };
+
+          const config = {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          };
+
+          const { data } = await axios.post(
+            `${BASE_URL}/contactus`,
+            body,
+            config
+          );
+
+          if (data) {
+            antdMessage.success("Message submitted");
+            setIsLoading(false);
+            clearForm();
+          }
+        } catch (error) {
+          const message =
+            error.response && error.response.data.message
+              ? error.response.data.message
+              : error.message;
+          setIsLoading(false);
+          antdMessage.error(message);
+        }
+      }
+    }
+  };
+
   return (
     <ContactUsPageContainer>
       <StaticNavbar toggle={toggle} />
@@ -384,11 +524,29 @@ const ContactUs = () => {
             We're here to help!
           </p>
 
-          <form>
+          <form onSubmit={handleSubmit}>
             <Input
-              placeholder="Name"
-              label="Your full name"
-              id="contact_us_name"
+              placeholder="First Name"
+              label="Your first name"
+              id="contact_us_first_name"
+              value={firstName}
+              onChange={(evt) => setFirstName(evt.target.value)}
+              onFocus={() => firstNameError && setFirstNameError(null)}
+              error={firstNameError}
+              onBlur={handleFirstNameBlur}
+              disabled={isLoading}
+            />
+
+            <Input
+              placeholder="Last Name"
+              label="Your last name"
+              id="contact_us_last_name"
+              value={lastName}
+              onChange={(evt) => setLastName(evt.target.value)}
+              onFocus={() => lastNameError && setLastNameError(null)}
+              error={lastNameError}
+              onBlur={handleLastNameBlur}
+              disabled={isLoading}
             />
 
             <Input
@@ -397,21 +555,42 @@ const ContactUs = () => {
               label="Email address"
               inputMode="email"
               x-autocompletetype="email"
+              value={email}
+              onChange={(evt) => setEmail(evt.target.value)}
+              onFocus={() => emailError && setEmailError(null)}
+              error={emailError}
+              onBlur={handleEmailBlur}
+              disabled={isLoading}
             />
 
             <Input
-              label="Message subject"
-              placeholder="Subject of your message"
-              id="contact_us_subject"
+              id="contact_phone_number"
+              placeholder="enter phone number"
+              label="Phone number"
+              mt={16}
+              inputMode="numeric"
+              maxLength={11}
+              value={phoneNumber}
+              onChange={handlePhoneNumberChange}
+              onFocus={() => phoneNumberError && setPhoneNumberError(null)}
+              error={phoneNumberError}
+              onBlur={handlePhoneNumberBlur}
+              disabled={isLoading}
             />
 
             <Textarea
               placeholder="Type your message"
               label="Message"
               id="contact_us_message"
+              value={message}
+              onChange={(evt) => setMessage(evt.target.value)}
+              onFocus={() => messageError && setMessageError(null)}
+              error={messageError}
+              onBlur={handleMessageBlur}
+              disabled={isLoading}
             />
 
-            <button>Submit</button>
+            <button>{isLoading ? <ButtonLoader /> : "Submit"}</button>
           </form>
         </div>
 
@@ -452,11 +631,19 @@ const ContactUs = () => {
           </p>
 
           <div>
-            <a href="https://onelink.to/q5au2z">
+            <a
+              href="https://play.google.com/store/apps/details?id=com.oneminutepay"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <PlayStoreIcon /> Google play
             </a>
 
-            <a href="https://onelink.to/q5au2z">
+            <a
+              href="https://apps.apple.com/ng/app/1minutepay-com/id1637654016"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               <img src={Apple} alt="" className="mx-2" />
               App store
             </a>

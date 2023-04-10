@@ -34,11 +34,19 @@ const NotFound = () => {
         </p>
 
         <div>
-          <a href="https://onelink.to/q5au2z">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.oneminutepay"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <PlayStoreIcon /> Google play
           </a>
 
-          <a href="https://onelink.to/q5au2z">
+          <a
+            href="https://apps.apple.com/ng/app/1minutepay-com/id1637654016"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
             <img src={Apple} alt="" className="mx-2" />
             App store
           </a>

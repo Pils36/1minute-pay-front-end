@@ -49,10 +49,18 @@ function Navbar({ toggle }) {
                 >
                   <div className="ps-2">DOWNLOAD THE APP </div>
                   <img src={Line} alt="" className="px-2" />
-                  <a href="https://onelink.to/q5au2z">
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.oneminutepay"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
                     <img src={Andriod} alt="" className="mx-2" />
                   </a>
-                  <a href="https://onelink.to/q5au2z">
+                  <a
+                    href="https://apps.apple.com/ng/app/1minutepay-com/id1637654016"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
                     <img src={Apple} alt="" className="mx-2" />
                   </a>
                 </div>

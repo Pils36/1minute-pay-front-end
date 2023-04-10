@@ -182,7 +182,7 @@ const Blog = () => {
 
         <h2>BLOG</h2>
 
-        <h1>Blog</h1>
+        <h1>1minutepay Blog</h1>
 
         <p>
           Get informed about gift cards, cryptocurrency,and much more. Read from

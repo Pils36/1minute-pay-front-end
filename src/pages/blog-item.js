@@ -11,6 +11,8 @@ import { BlogCard } from "../components/cards/BlogCard";
 import { StaticNavbar } from "../components/Navbar/StaticNavbar";
 import Sidebar from "../components/Sidebar";
 import { BlogPageContainer } from "./blog";
+import Apple from "../assets/apple.svg";
+import { PlayStoreIcon } from "../components/icons";
 
 export const BlogItemPageContainer = styled(BlogPageContainer)`
   > h2 {
@@ -106,6 +108,11 @@ export const BlogItemContentContainer = styled.div`
     font-size: 20px;
     line-height: 150%;
     color: #000000;
+
+    a {
+      color: #6b7ed6;
+      text-decoration: none;
+    }
 
     img {
       width: 100%;
@@ -235,6 +242,44 @@ export const RelatedContainer = styled.div`
 
       &::-webkit-scrollbar {
         display: none;
+      }
+    }
+  }
+`;
+
+export const BlogDownloadLinks = styled.div`
+  margin: 50px auto 0;
+  width: 90%;
+  max-width: 1074px;
+  > div {
+    max-width: 551px;
+    display: flex;
+    column-gap: 24px;
+
+    a {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 8px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 150%;
+      color: #ffffff;
+      height: 56px;
+      background: #310e3a;
+      border-radius: 32px;
+      text-decoration: none;
+    }
+  }
+
+  @media (max-width: 400px) {
+    > div {
+      flex-direction: column;
+      row-gap: 24px;
+
+      a {
+        flex: 0 0 auto;
       }
     }
   }
@@ -378,6 +423,27 @@ const BlogItem = () => {
             })}
           </div>
         </BlogItemContentContainer>
+
+        <BlogDownloadLinks>
+          <div>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.oneminutepay"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <PlayStoreIcon /> Google play
+            </a>
+
+            <a
+              href="https://apps.apple.com/ng/app/1minutepay-com/id1637654016"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <img src={Apple} alt="" className="mx-2" />
+              App store
+            </a>
+          </div>
+        </BlogDownloadLinks>
 
         {relatedBlogs.length ? (
           <RelatedContainer>

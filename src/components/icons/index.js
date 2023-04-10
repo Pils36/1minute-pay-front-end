@@ -7,6 +7,8 @@ import { PinIcon } from "./PinIcon";
 import { ChatIcon } from "./ChatIcon";
 import { MailIcon } from "./MailIcon";
 import { RightCaretIcon } from "./RightCaretIcon";
+import { HalfStarIcon } from "./HalfStarIcon";
+import { StarIcon } from "./StarIcon";
 
 export {
   EyeIcon,
@@ -18,4 +20,6 @@ export {
   ChatIcon,
   MailIcon,
   RightCaretIcon,
+  HalfStarIcon,
+  StarIcon,
 };
