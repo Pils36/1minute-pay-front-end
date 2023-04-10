@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { LogoIcon } from "../icons";
+import { HamburgerIcon, LogoIcon } from "../icons";
 import { MenuBtn } from "./NavbarElements";
 import OpenBtn from "../../assets/menu-open.svg";
 
@@ -69,7 +69,7 @@ export const StaticNavbar = ({ toggle }) => (
     </ul>
 
     <MenuBtn onClick={toggle}>
-      <img src={OpenBtn} alt="logo" />
+      <HamburgerIcon />
     </MenuBtn>
   </StaticNavbarContainer>
 );

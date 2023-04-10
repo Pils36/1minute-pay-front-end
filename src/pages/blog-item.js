@@ -350,7 +350,7 @@ const BlogItem = () => {
     );
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <title>{blog?.fields?.title ?? "1minutepay | Blog"}</title>
         <meta
           name="description"
@@ -379,7 +379,7 @@ const BlogItem = () => {
             "Get informed about gift cards, cryptocurrency,and much more. Read from our blog posts"
           }
         />
-      </Helmet>
+      </Helmet> */}
       <BlogItemPageContainer>
         <StaticNavbar toggle={toggle} />
 
