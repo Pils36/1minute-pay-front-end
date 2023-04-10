@@ -50,7 +50,7 @@ export const BlogCardContainer = styled.div`
     }
   }
 
-  h4 {
+  > a:nth-child(3) {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -62,6 +62,7 @@ export const BlogCardContainer = styled.div`
     font-size: 24px;
     line-height: 140%;
     color: #000000;
+    text-decoration: none;
   }
 
   p {
@@ -77,7 +78,7 @@ export const BlogCardContainer = styled.div`
     color: #000000;
   }
 
-  a {
+  > a:last-child {
     width: 176px;
     height: 56px;
     border: 1px solid #4b2a85;
@@ -114,7 +115,7 @@ export const BlogCardContainer = styled.div`
       }
     }
 
-    h4 {
+    > a:nth-child(3) {
       font-size: 15.4514px;
       line-height: 140%;
       height: 44px;
@@ -128,7 +129,7 @@ export const BlogCardContainer = styled.div`
       margin-bottom: 15px;
     }
 
-    a {
+    > a:last-child {
       width: 113.31px;
       height: 36.05px;
       font-size: 10.301px;
@@ -189,7 +190,7 @@ export const BlogCard = ({ isRelated, blog }) => (
       <div>{moment(blog.sys.createdAt).format("Do MMMM, YYYY")}</div>
     </div>
 
-    <h4>{blog.fields.title}</h4>
+    <Link to={`/blog/${blog.fields.slug}`}>{blog.fields.title}</Link>
 
     <p>{blog.fields.snippet}</p>
 

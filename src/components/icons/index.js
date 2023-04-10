@@ -9,6 +9,8 @@ import { MailIcon } from "./MailIcon";
 import { RightCaretIcon } from "./RightCaretIcon";
 import { HalfStarIcon } from "./HalfStarIcon";
 import { StarIcon } from "./StarIcon";
+import { HamburgerIcon } from "./HamburgerIcon";
+import { AppleIcon } from "./AppleIcon";
 
 export {
   EyeIcon,
@@ -22,4 +24,6 @@ export {
   RightCaretIcon,
   HalfStarIcon,
   StarIcon,
+  HamburgerIcon,
+  AppleIcon,
 };

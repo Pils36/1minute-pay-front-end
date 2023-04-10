@@ -80,9 +80,9 @@ export const ContactUsContentContainer = styled.section`
     h3 {
       font-family: "Fredoka", sans-serif;
       font-weight: 500;
-      font-size: 32px;
-      line-height: 150%;
-      color: #333333;
+      font-size: 40px;
+      line-height: 120%;
+      color: #4b2a85;
     }
 
     > p {
@@ -170,6 +170,8 @@ export const ContactUsContentContainer = styled.section`
   }
 
   @media (max-width: 767px) {
+    padding-top: 40px;
+
     > div:first-child {
       h3 {
         font-size: 20px;
@@ -343,27 +345,27 @@ export const ContactAppDownload = styled.div`
 `;
 
 const socialLinks = [
-  { link: "https://facebook.com", icon: <FacebookIcon /> },
-  { link: "https://instagram.com", icon: <InstagramIcon /> },
-  { link: "https://twitter.com", icon: <TwitterIcon /> },
+  { link: "https://m.facebook.com/1minutepay", icon: <FacebookIcon /> },
+  { link: "https://instagram.com/1minutepay", icon: <InstagramIcon /> },
+  { link: "https://twitter.com/1minutepay", icon: <TwitterIcon /> },
   { link: "https://linkedin.com", icon: <LinkedinIcon /> },
 ];
 
 const contactInfo = [
-  {
-    icon: <PinIcon />,
-    title: "Pay us a visit",
-    text: "23, Afolabi Close, Opebi Road, Ikeja, Lagos",
-  },
+  // {
+  //   icon: <PinIcon />,
+  //   title: "Pay us a visit",
+  //   text: "23, Afolabi Close, Opebi Road, Ikeja, Lagos",
+  // },
   {
     icon: <MailIcon />,
     title: "Send us a mail",
-    text: "Our friendly team is here to help you. Send a mail to 1minutepay@gmail.com",
+    text: "Our friendly team is here to help you. Send a mail to support@1minutepay.com",
   },
   {
     icon: <ChatIcon />,
     title: "Chat with our Experts",
-    text: "+23436364747 (WhatsApp)",
+    text: "+2348085727000 (WhatsApp)",
   },
 ];
 
@@ -510,7 +512,7 @@ const ContactUs = () => {
 
       <h2>CONTACT</h2>
 
-      <h1>Contact us</h1>
+      {/* <h1>Contact us</h1> */}
 
       <ContactUsContentContainer>
         <div>

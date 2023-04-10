@@ -12,7 +12,7 @@ import { StaticNavbar } from "../components/Navbar/StaticNavbar";
 import Sidebar from "../components/Sidebar";
 import { BlogPageContainer } from "./blog";
 import Apple from "../assets/apple.svg";
-import { PlayStoreIcon } from "../components/icons";
+import { AppleIcon, PlayStoreIcon } from "../components/icons";
 
 export const BlogItemPageContainer = styled(BlogPageContainer)`
   > h2 {
@@ -439,7 +439,7 @@ const BlogItem = () => {
               target="_blank"
               rel="noreferrer noopener"
             >
-              <img src={Apple} alt="" className="mx-2" />
+              <AppleIcon />
               App store
             </a>
           </div>

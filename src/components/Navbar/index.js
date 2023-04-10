@@ -5,7 +5,7 @@ import Line from "../../assets/line.svg";
 import Andriod from "../../assets/andriod.svg";
 import Apple from "../../assets/apple.svg";
 import OpenBtn from "../../assets/menu-open.svg";
-import { LogoIcon } from "../icons";
+import { HamburgerIcon, LogoIcon } from "../icons";
 
 function Navbar({ toggle }) {
   return (
@@ -17,21 +17,27 @@ function Navbar({ toggle }) {
               <LogoIcon isWhite />
             </NavLink>
 
-            <MenuBtn>
-              <img src={OpenBtn} alt="logo" onClick={toggle} />
+            <MenuBtn onClick={toggle}>
+              <HamburgerIcon />
             </MenuBtn>
 
             <NavMenu>
-              <NavLink to="/about" activStyle>
+              <NavLink to="/about-us" activStyle>
                 About Us
               </NavLink>
-              <a
+              <NavLink to="/contact-us" activStyle>
+                Contact Us
+              </NavLink>
+              <NavLink to="/blog" activStyle>
+                Blog
+              </NavLink>
+              {/* <a
                 href="https://api.whatsapp.com/send?phone=2348138176064"
                 activStyle
                 style={{ color: "#fff", textDecoration: "none" }}
               >
                 WhatsApp
-              </a>
+              </a> */}
               {/* <NavLink to="/about" activStyle>
                 Sign-In
               </NavLink>

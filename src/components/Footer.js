@@ -1,5 +1,6 @@
 import React from "react";
 import FooterLogo from "../assets/footer-logo.svg";
+import moment from "moment";
 
 function Footer() {
   return (
@@ -8,7 +9,9 @@ function Footer() {
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-3 d-flex justify-content-center count-box">
-              <div className="countdown-heading">Let the Numbers speak for Us.</div>
+              <div className="countdown-heading">
+                Let the Numbers speak for Us.
+              </div>
             </div>
             <div className="col-12 col-lg-3 d-flex justify-content-center count-box">
               <div className="d-flex flex-column justify-content-center align-items-center">
@@ -39,45 +42,95 @@ function Footer() {
               <div className="community-head">Join Our Community</div>
 
               <div className="community-text">
-                Learn more about 1MinutePay, chat with the team, others in the community, and have your say in shaping the future of the Digital
-                transactional space.
+                Learn more about 1MinutePay, chat with the team, others in the
+                community, and have your say in shaping the future of the
+                Digital transactional space.
               </div>
 
               <div className="table">
                 <div className="d-flex justify-content-between align-items-center footer-border">
                   <div className="email">
-                    <a href="mailto:support@1minutepay.com" style={{ color: 'white', textDecoration: 'none' }}>Email</a>
+                    <a
+                      href="mailto:support@1minutepay.com"
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
+                      Email
+                    </a>
                   </div>
                   <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
-                    <a href="mailto:support@1minutepay.com" style={{ color: 'white', textDecoration: 'none' }}>
+                    <a
+                      href="mailto:support@1minutepay.com"
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
                       support@1minutepay.com
                     </a>
-                  
                   </div>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
-                  <div className="email"><a target="_blank" rel="noreferrer" href="https://twitter.com/1minutepay" style={{ color: 'white', textDecoration: 'none' }}>Twitter</a></div>
+                  <div className="email">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://twitter.com/1minutepay"
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
+                      Twitter
+                    </a>
+                  </div>
                   <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
-                    <a target="_blank" rel="noreferrer" href="https://twitter.com/1minutepay" style={{ color: 'white', textDecoration: 'none' }}>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://twitter.com/1minutepay"
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
                       https://twitter.com/1minutepay
                     </a>
                   </div>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
-                  <div className="email"><a target="_blank" rel="noreferrer" href="https://instagram.com/1minutepay_app" style={{ color: 'white', textDecoration: 'none' }}>Instagram</a></div>
+                  <div className="email">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://instagram.com/1minutepay_app"
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
+                      Instagram
+                    </a>
+                  </div>
                   <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
-                    <a target="_blank" rel="noreferrer" href="https://instagram.com/1minutepay_app" style={{ color: 'white', textDecoration: 'none' }}>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://instagram.com/1minutepay_app"
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
                       https://instagram.com/1minutepay_app
                     </a>
                   </div>
                 </div>
 
                 <div className="d-flex justify-content-between align-items-center footer-border">
-                  <div className="email"><a target="_blank" rel="noreferrer" href="https://m.facebook.com/1minutepay" style={{ color: 'white', textDecoration: 'none' }}>Facebook</a></div>
+                  <div className="email">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://m.facebook.com/1minutepay"
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
+                      Facebook
+                    </a>
+                  </div>
                   <div className="email-text d-none d-xs-none d-sm-none d-md-block d-lg-block">
-                    <a target="_blank" rel="noreferrer" href="https://m.facebook.com/1minutepay" style={{ color: 'white', textDecoration: 'none' }}>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://m.facebook.com/1minutepay"
+                      style={{ color: "white", textDecoration: "none" }}
+                    >
                       https://m.facebook.com/1minutepay
                     </a>
                   </div>
@@ -90,7 +143,8 @@ function Footer() {
               </div>
 
               <div className="address">
-                Lagos, Nigeria <br /> © 1MinutePay - 2022
+                Lagos, Nigeria <br /> © 1MinutePay -{" "}
+                {moment(new Date(Date.now())).format("YYYY")}
               </div>
               {/* <div className="address">
                 20 Adisa Akintoye Street,
@@ -103,9 +157,14 @@ function Footer() {
 
               <div className="d-flex justify-content-between align-items-center footer-border">
                 <div className="email-text">
-                  <a target="_blank" rel="noreferrer" href="https://app.termly.io/document/terms-of-use-for-online-marketplace/bf97b7c8-28d3-4143-a4d4-ea3be3d63942" style={{ color: 'white', textDecoration: 'none' }}>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://app.termly.io/document/terms-of-use-for-online-marketplace/bf97b7c8-28d3-4143-a4d4-ea3be3d63942"
+                    style={{ color: "white", textDecoration: "none" }}
+                  >
                     Terms and Conditions
-                    </a>
+                  </a>
                 </div>
               </div>
 
@@ -114,7 +173,7 @@ function Footer() {
                 Authorised by CAC Nigeria - RC1616401
               </div>
 
-              <div className="signature">Made by O2-Digital</div>
+              {/* <div className="signature">Made by O2-Digital</div> */}
 
               <div className="footer-logo d-flex justify-content-end d-block d-sm-block d-md-none d-lg-none">
                 <img src={FooterLogo} alt="" />
