@@ -13,6 +13,7 @@ import Logo from "../../assets/logo.svg";
 import BoxEth from "../../assets/ethereum-box.svg";
 import BoxAmazon from "../../assets/amazon-box.svg";
 import About from "./About";
+import { AmazonIcon, CloseCircleIcon, CloseIcon, LogoIcon } from "../icons";
 
 const Sidebar = ({ isOpen, toggle }) => {
   const [about, setAbout] = useState(false);
@@ -32,8 +33,10 @@ const Sidebar = ({ isOpen, toggle }) => {
     <SidebarContainer isOpen={isOpen}>
       {about && <About showModal={showModal} />}
       <Icon className="d-flex justify-content-between">
-        <img src={Logo} alt="logo" />
-        <img src={CloseBtn} alt="close-btn" onClick={toggle} />
+        <LogoIcon isWhite />
+        <span onClick={toggle}>
+          <CloseCircleIcon />
+        </span>
       </Icon>
 
       <SidebarWrapper>
@@ -70,7 +73,7 @@ const Sidebar = ({ isOpen, toggle }) => {
               </div>
               <div className="box-grey-mobile">
                 <div className="box-img-mobile d-flex justify-content-end">
-                  <img src={BoxAmazon} alt="" />
+                  <AmazonIcon />
                 </div>
                 <div className="box-text text-right">
                   <div className="head-text-mobile-right ">

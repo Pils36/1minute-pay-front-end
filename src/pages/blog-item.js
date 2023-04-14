@@ -2,17 +2,15 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { createClient } from "contentful";
 import moment from "moment";
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
 import Lottie from "react-lottie";
 import { useNavigate, useParams } from "react-router-dom";
 import styled from "styled-components";
 import lottieLoader from "../assets/lottie/loader.json";
-import { BlogCard } from "../components/cards/BlogCard";
 import { StaticNavbar } from "../components/Navbar/StaticNavbar";
 import Sidebar from "../components/Sidebar";
-import { BlogPageContainer } from "./blog";
-import Apple from "../assets/apple.svg";
+import { BlogCard } from "../components/cards/BlogCard";
 import { AppleIcon, PlayStoreIcon } from "../components/icons";
+import { BlogPageContainer } from "./blog";
 
 export const BlogItemPageContainer = styled(BlogPageContainer)`
   > h2 {

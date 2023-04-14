@@ -11,6 +11,8 @@ import { HalfStarIcon } from "./HalfStarIcon";
 import { StarIcon } from "./StarIcon";
 import { HamburgerIcon } from "./HamburgerIcon";
 import { AppleIcon } from "./AppleIcon";
+import { CloseCircleIcon } from "./CloseCircleIcon";
+import { AmazonIcon } from "./AmazonIcon";
 
 export {
   EyeIcon,
@@ -26,4 +28,6 @@ export {
   StarIcon,
   HamburgerIcon,
   AppleIcon,
+  CloseCircleIcon,
+  AmazonIcon,
 };
