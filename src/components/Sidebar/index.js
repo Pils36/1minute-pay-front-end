@@ -51,13 +51,6 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink to="/blog" onClick={toggle}>
             Blog
           </SidebarLink>
-
-          {/* <SidebarRoute onClick={toggle} to="services">
-            Sign-In
-          </SidebarRoute>
-          <SidebarRoute onClick={toggle} to="contact">
-            Sign-Up
-          </SidebarRoute> */}
         </SidebarMenu>
 
         <SideBtnWrap>
