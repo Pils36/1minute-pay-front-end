@@ -25,6 +25,16 @@ export const BlogPageContainer = styled(ContactUsPageContainer)`
     margin-bottom: 40px;
   }
 
+  > button {
+    display: block;
+    margin: 50px auto 0;
+    background: #6b7ed7;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: none;
+  }
+
   @media (max-width: 767px) {
     > p {
       font-size: 14px;
@@ -90,6 +100,7 @@ const Blog = () => {
   const [blogCategories, setBlogCategories] = useState([]);
   const [blogs, setBlogs] = useState();
   const [filteredBlogs, setFilteredBlogs] = useState();
+  const [currentChunk, setCurrentChunk] = useState(0);
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeBlogCategory, setActiveBlogCategory] = useState("All blogs");
@@ -124,8 +135,12 @@ const Blog = () => {
           ...catRes.items.map((cat) => cat.fields.name),
         ]);
         setBlogs(blogRes.items);
-        setFilteredBlogs(blogRes.items);
-        console.log(blogRes.items);
+        const splitBlogs = [];
+
+        for (let i = 0; i < blogRes.items.length; i += 10) {
+          splitBlogs.push(blogRes.items.slice(i, i + 10));
+        }
+        setFilteredBlogs(splitBlogs);
         setLoading(false);
       } catch (err) {
         console.error(err);
@@ -202,10 +217,18 @@ const Blog = () => {
         </BlogNavigationContainer>
 
         <BlogCardFlexContainer>
-          {filteredBlogs.map((blog, i) => (
-            <BlogCard key={i} blog={blog} />
-          ))}
+          {filteredBlogs.map(
+            (chunk, i) =>
+              i <= currentChunk &&
+              chunk.map((blog, j) => <BlogCard key={j} blog={blog} />)
+          )}
         </BlogCardFlexContainer>
+
+        {currentChunk < filteredBlogs.length - 1 && (
+          <button onClick={() => setCurrentChunk((chunk) => chunk + 1)}>
+            Load more
+          </button>
+        )}
       </BlogPageContainer>
     </>
   );
